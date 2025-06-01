@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="logo">⌛</div>
+    
+    <!-- Hamburger Toggle Button -->
+    <button class="hamburger" id="hamburger">&#9776;</button>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Lab</a></li>
+    </ul>
+  </nav>
+  <div class="popup-menu" id="popup-menu">
+  <button class="close-btn" id="close-btn">&times;</button>
+  <ul class="popup-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Lab</a></li>
+  </ul>
+</div>
+</header>
+
+  <main>
+    <section class="intro">
+      <img src="img/foto_fandi.jpg" alt="avatar" class="avatar"/>
+      <p class="tagline">Judges a book by its <span>cover</span>.</p>
+      <p class="bio">I'm a Software Engineer.</p>
+      <p class="details">Currently in Jakarta, Indonesia 🏝️</p>
+    </section>
+
+    <section class="experience">
+      <h2>Work Experience</h2>
+      <div class="cards">
+        <div class="card" id="preview-port1">CIE on the Mobile<br/><small>2023 - now</small></div>
+        <div class="card" id="preview-port2">CIE on the Mobile<br/><small>2022 - 2023</small></div>
+        <div class="card" id="preview-port3">CIE on the Mobile<br/><small>2021 - 2022</small></div>
+        <div class="card" id="preview-port4">CIE on the Mobile<br/><small>2020 - 2021</small></div>
+      </div>
+    </section>
+
+    <section class="socials">
+      <p>Looking to join a cross-functional team</p>
+      <div class="icons">
+        <a href="#"><img src="https://skillicons.dev/icons?i=js,html,css,react,nodejs" alt="stack"/></a>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2>Example Project</h2>
+      <div class="project">
+        <div class="description">
+          <p>This is a short description of the project. It could include the tools you used or the goal of the project.</p>
+        </div>
+        <div class="image">
+          <img src="https://via.placeholder.com/300x200" alt="Project preview"/>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="image">
+          <img src="https://via.placeholder.com/300x200" alt="Project preview"/>
+        </div>
+        <div class="description">
+          <p>Another project with description, tools, and design goals briefly explained here.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact: email@example.com</p>
+    <div class="footer-icons">
+      <a href="#">🌐</a>
+      <a href="#">🐦</a>
+      <a href="#">💼</a>
+    </div>
+  </footer>
+</body>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const popupMenu = document.getElementById('popup-menu');
+  const closeBtn = document.getElementById('close-btn');
+
+  hamburger.addEventListener('click', () => {
+    popupMenu.classList.add('show');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    popupMenu.classList.remove('show');
+  });
+
+  // Optional: klik di luar popup untuk menutup
+  window.addEventListener('click', function(e) {
+    if (e.target === popupMenu) {
+      popupMenu.classList.remove('show');
+    }
+  });
+</script>
+</html>
