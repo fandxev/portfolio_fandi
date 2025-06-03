@@ -2,110 +2,142 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
-  <link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
-<header>
-  <nav class="navbar">
-    <div class="logo">⌛</div>
-    
-    <!-- Hamburger Toggle Button -->
-    <button class="hamburger" id="hamburger">&#9776;</button>
 
-    <!-- Navigation Links -->
-    <ul class="nav-links" id="nav-menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Lab</a></li>
-    </ul>
-  </nav>
-  <div class="popup-menu" id="popup-menu">
-  <button class="close-btn" id="close-btn">&times;</button>
-  <ul class="popup-links">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Lab</a></li>
-  </ul>
-</div>
-</header>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=McLaren&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    * {
+      font-family: 'McLaren', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#0d0628] text-white">
+  <header>
+    <nav class="flex justify-between items-center px-8 py-4 bg-[#10042b]">
+      <div class="text-2xl">⌛</div>
+      <button class="hamburger text-2xl md:hidden" id="hamburger">&#9776;</button>
+      <ul class="hidden md:flex gap-6 font-bold" id="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Lab</a></li>
+      </ul>
+    </nav>
+
+    <div class="fixed top-0 right-[-100%] w-[250px] h-full bg-[#10042b] p-8 shadow-lg transition-all duration-300 z-[9999]" id="popup-menu">
+      <button class="absolute top-4 right-4 text-2xl text-white" id="close-btn">&times;</button>
+      <ul class="mt-16 space-y-6 font-bold text-left">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Lab</a></li>
+      </ul>
+    </div>
+  </header>
 
   <main>
-    <section class="intro">
-      <img src="img/foto_fandi.jpg" alt="avatar" class="avatar"/>
-      <p class="tagline">Judges a book by its <span>cover</span>.</p>
-      <p class="bio">I'm a Software Engineer.</p>
-      <p class="details">Currently in Jakarta, Indonesia 🏝️</p>
+    <section class="text-center py-8">
+      <img src="img/foto_fandi.jpg" alt="avatar" class="w-[100px] h-[100px] rounded-full shadow-[0_0_20px_#8839ef] mx-auto" />
+      <p class="text-lg mt-4">I'm a Software Engineer.</p>
+      <p class="text-sm text-[#b0a9d9]">Currently in Malang East Java, Indonesia 🌽️</p>
+      <p class="mt-4 px-4 md:px-32">Hi, I'm Software Engineer with more than 2 years of experience in Programming. Im bachelor degree in Informatics Engineering from Universitas Malik Ibrahim Malang. My programming knowledge is in Mobile Programming (Native Android & Flutter), and also Web Development (Front End & Back End)</p>
     </section>
 
-    <section class="experience">
-      <h2>Work Experience</h2>
-      <div class="cards">
-        <div class="card" id="preview-port1">CIE on the Mobile<br/><small>2023 - now</small></div>
-        <div class="card" id="preview-port2">CIE on the Mobile<br/><small>2022 - 2023</small></div>
-        <div class="card" id="preview-port3">CIE on the Mobile<br/><small>2021 - 2022</small></div>
-        <div class="card" id="preview-port4">CIE on the Mobile<br/><small>2020 - 2021</small></div>
+    <section class="text-center px-4 py-8">
+      <h2 class="text-2xl font-bold mb-4">Work Experience</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-center bg-no-repeat" style="background-image: url('img/background-gradient.png'); background-size: 300px;">
+        <div class="flex p-4 sm:w-[400px] h-[135px] bg-cover" style="background-image: url('img/rect-1.png');">
+          <img src="img/icon_mobile_development.png" alt="icon_mobile_dev" class="w-[88px]" />
+          <div class="ml-4 text-left">
+            <h1 class="font-bold">CIB on the mantaps</h1>
+            <p>this is so mantap oyi</p>
+            <button class="mt-2 bg-blue-500 hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-purple-500 transition-colors duration-200">Klik Saya</button>
+          </div>
+        </div>
+        <div class="p-4 sm:w-[400px] h-[135px] bg-cover flex items-center justify-center" style="background-image: url('img/rect-2.png');">
+          <div>
+            <p>CIE on the Mobile</p>
+            <small>2022 - 2023</small>
+          </div>
+        </div>
+        <div class="p-4 sm:w-[400px] h-[135px] bg-cover flex items-center justify-center" style="background-image: url('img/rect-3.png');">
+          <div>
+            <p>CIE on the Mobile</p>
+            <small>2021 - 2022</small>
+          </div>
+        </div>
+        <div class="p-4 sm:w-[400px] h-[135px] bg-cover flex items-center justify-center" style="background-image: url('img/rect-4.png');">
+          <div>
+            <p>CIE on the Mobile</p>
+            <small>2020 - 2021</small>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="socials">
+    <section class="text-center py-8">
       <p>Looking to join a cross-functional team</p>
-      <div class="icons">
-        <a href="#"><img src="https://skillicons.dev/icons?i=js,html,css,react,nodejs" alt="stack"/></a>
+      <div class="mt-4">
+        <a href="#"><img src="https://skillicons.dev/icons?i=js,html,css,react,nodejs" alt="stack" class="h-10 inline" /></a>
       </div>
     </section>
 
-    <section class="projects">
-      <h2>Example Project</h2>
-      <div class="project">
-        <div class="description">
+    <section class="px-4 py-8">
+      <h2 class="text-2xl font-bold mb-4">Example Project</h2>
+
+      <div class="flex flex-wrap gap-4 items-center mb-8">
+        <div class="flex-1 min-w-[300px]">
           <p>This is a short description of the project. It could include the tools you used or the goal of the project.</p>
         </div>
-        <div class="image">
-          <img src="https://via.placeholder.com/300x200" alt="Project preview"/>
+        <div class="flex-1 min-w-[300px]">
+          <img src="https://via.placeholder.com/300x200" alt="Project preview" class="w-full rounded-xl shadow-[0_0_20px_#8839ef]" />
         </div>
       </div>
 
-      <div class="project">
-        <div class="image">
-          <img src="https://via.placeholder.com/300x200" alt="Project preview"/>
+      <div class="flex flex-wrap gap-4 items-center">
+        <div class="flex-1 min-w-[300px]">
+          <img src="https://via.placeholder.com/300x200" alt="Project preview" class="w-full rounded-xl shadow-[0_0_20px_#8839ef]" />
         </div>
-        <div class="description">
+        <div class="flex-1 min-w-[300px]">
           <p>Another project with description, tools, and design goals briefly explained here.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="text-center py-8 bg-[#10042b]">
     <p>Contact: email@example.com</p>
-    <div class="footer-icons">
+    <div class="flex justify-center gap-4 text-xl mt-2">
       <a href="#">🌐</a>
       <a href="#">🐦</a>
       <a href="#">💼</a>
     </div>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const popupMenu = document.getElementById('popup-menu');
+    const closeBtn = document.getElementById('close-btn');
+
+    hamburger.addEventListener('click', () => {
+      popupMenu.classList.add('right-0');
+      popupMenu.classList.remove('right-[-100%]');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      popupMenu.classList.add('right-[-100%]');
+      popupMenu.classList.remove('right-0');
+    });
+
+    window.addEventListener('click', function(e) {
+      if (e.target === popupMenu) {
+        popupMenu.classList.add('right-[-100%]');
+        popupMenu.classList.remove('right-0');
+      }
+    });
+  </script>
 </body>
-
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const popupMenu = document.getElementById('popup-menu');
-  const closeBtn = document.getElementById('close-btn');
-
-  hamburger.addEventListener('click', () => {
-    popupMenu.classList.add('show');
-  });
-
-  closeBtn.addEventListener('click', () => {
-    popupMenu.classList.remove('show');
-  });
-
-  // Optional: klik di luar popup untuk menutup
-  window.addEventListener('click', function(e) {
-    if (e.target === popupMenu) {
-      popupMenu.classList.remove('show');
-    }
-  });
-</script>
 </html>
