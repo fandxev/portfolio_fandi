@@ -5,15 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=McLaren&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=McLaren&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     * {
       font-family: 'McLaren', sans-serif;
     }
+    .font-poppins{
+      font-family: 'poppins', sans-serif;
+    }
+    .skillname{
+      color:#9857D3;
+    }
+
   </style>
 </head>
 <body class="bg-[#0d0628] text-white">
@@ -48,41 +56,140 @@
 
     <section class="text-center px-4 py-8">
       <h2 class="text-2xl font-bold mb-4">Work Experience</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-center bg-no-repeat" style="background-image: url('img/background-gradient.png'); background-size: 300px;">
-        <div class="flex p-4 sm:w-[400px] h-[135px] bg-cover" style="background-image: url('img/rect-1.png');">
-          <img src="img/icon_mobile_development.png" alt="icon_mobile_dev" class="w-[88px]" />
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-0.5 bg-center bg-no-repeat" style="background-image: url('img/background-gradient.png'); background-size: 200px; background-position: center 20px;">
+        <div class="flex p-6 sm:w-[400px] h-auto bg-cover sm:place-self-end" style="background-image: url('img/rect-1.png');">
+          <img src="img/icon_mobile_development.png" alt="icon_mobile_dev" class="w-[80px] self-start" />
           <div class="ml-4 text-left">
-            <h1 class="font-bold">CIB on the mantaps</h1>
-            <p>this is so mantap oyi</p>
-            <button class="mt-2 bg-blue-500 hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-purple-500 transition-colors duration-200">Klik Saya</button>
+            <h1 class="font-bold">Mobile Apps Developer</h1>
+            <p class="text-[9px] my-2">My main skill in Software Engineering using Kotlin/Java and Flutter</p>
+            <button class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
           </div>
         </div>
-        <div class="p-4 sm:w-[400px] h-[135px] bg-cover flex items-center justify-center" style="background-image: url('img/rect-2.png');">
-          <div>
-            <p>CIE on the Mobile</p>
-            <small>2022 - 2023</small>
+ 
+      <div class="flex p-6 sm:w-[400px] h-auto bg-cover" style="background-image: url('img/rect-2.png');">
+          <img src="img/icon_web_development.png" alt="icon_web_dev" class="w-[80px] self-start" />
+          <div class="ml-4 text-left">
+            <h1 class="font-bold">Web Developer</h1>
+            <p class="text-[9px] my-2">Make website using HTML, CSS, Javascript, Jquery, PHP, and Vue</p>
+            <button class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
+          </div>
+      </div>
+
+
+       
+         <div class="flex p-6 sm:w-[400px] h-auto bg-cover sm:place-self-end" style="background-image: url('img/rect-3.png');">
+          <img src="img/icon_database_administrator.png" alt="icon_db_admin" class="w-[80px] self-start" />
+          <div class="ml-4 text-left">
+            <h1 class="font-bold">SQL Database</h1>
+            <p class="text-[9px] my-2">Designing Effective RDBMS Schema using MySQL/PostgreSQL</p>
+            <button class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
           </div>
         </div>
-        <div class="p-4 sm:w-[400px] h-[135px] bg-cover flex items-center justify-center" style="background-image: url('img/rect-3.png');">
-          <div>
-            <p>CIE on the Mobile</p>
-            <small>2021 - 2022</small>
+
+
+         <div class="flex p-6 sm:w-[400px] h-auto bg-cover" style="background-image: url('img/rect-4.png');">
+          <img src="img/icon_fullstack_development.png" alt="icon_fullstack_dev" class="w-[80px] self-start" />
+          <div class="ml-4 text-left">
+            <h1 class="font-bold">Fullstack Developer</h1>
+            <p class="text-[9px] my-2">Make website using HTML, CSS, Javascript, Jquery, PHP, and Vue</p>
+            <button class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
           </div>
-        </div>
-        <div class="p-4 sm:w-[400px] h-[135px] bg-cover flex items-center justify-center" style="background-image: url('img/rect-4.png');">
-          <div>
-            <p>CIE on the Mobile</p>
-            <small>2020 - 2021</small>
-          </div>
-        </div>
+      </div>
       </div>
     </section>
 
     <section class="text-center py-8">
-      <p>Looking to join a cross-functional team</p>
-      <div class="mt-4">
-        <a href="#"><img src="https://skillicons.dev/icons?i=js,html,css,react,nodejs" alt="stack" class="h-10 inline" /></a>
+      <p class="text-lg font-bold">Skills</p>
+   
+ <!-- Skill Categories -->
+  <div class="mt-8 flex flex-col md:flex-row gap-6 justify-center items-stretch">
+    <!-- Front End Mobile -->
+    <div class="bg-[#2C1250] border-[#693B93] border rounded-xl p-4 pt-6 pb-6 w-full md:w-1/3">
+      <h3 class="text-lg font-bold mb-6 font-poppins">Front End Mobile</h3>
+      <div class="flex flex-wrap justify-center gap-4">
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=flutter" class="h-8" alt="Flutter" />
+          <span class="font-poppins skillname">Flutter</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=kotlin" class="h-8" alt="Kotlin" />
+          <span class="font-poppins skillname">Kotlin</span>
+        </div>
       </div>
+    </div>
+
+    <!-- Front End Web -->
+    <div class="bg-[#2C1250] border-[#693B93] border rounded-xl p-4 pt-6 pb-6 w-full md:w-1/3">
+      <h3 class="text-lg font-bold mb-6 font-poppins">Front End Web</h3>
+      <div class="flex flex-wrap justify-center gap-4">
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=html" class="h-8" alt="HTML" />
+          <span class="font-poppins skillname">HTML</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=css" class="h-8" alt="CSS" />
+          <span class="font-poppins skillname">CSS</span>
+        </div>
+           <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8" alt="bootstrap" />
+          <span class="font-poppins skillname">Bootstrap</span>
+        </div>
+             <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=tailwind" class="h-8" alt="tailwind" />
+          <span class="font-poppins skillname">Tailwind</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=js" class="h-8" alt="JavaScript" />
+          <span class="font-poppins skillname">JavaScript</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=jquery" class="h-8" alt="jQuery" />
+          <span class="font-poppins skillname">jQuery</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=vue" class="h-8" alt="Vue" />
+          <span class="font-poppins skillname">Vue</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back End -->
+    <div class="bg-[#2C1250] border-[#693B93] border rounded-xl p-4 pt-6 pb-6 w-full md:w-1/3">
+      <h3 class="text-lg font-bold mb-6 font-bold font-poppins">Back End</h3>
+      <div class="flex flex-wrap justify-center gap-4">
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=php" class="h-8" alt="PHP" />
+          <span class="font-poppins skillname">PHP</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=laravel" class="h-8" alt="Laravel" />
+          <span class="font-poppins skillname">Laravel</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=nodejs" class="h-8" alt="NodeJS" />
+          <span class="font-poppins skillname">Node.js</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=express" class="h-8" alt="ExpressJS" />
+          <span class="font-poppins skillname">Express</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=nestjs" class="h-8" alt="NestJS" />
+          <span class="font-poppins skillname">NestJS</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=mysql" class="h-8" alt="MySQL" />
+          <span class="font-poppins skillname">MySQL</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="https://skillicons.dev/icons?i=postgres" class="h-8" alt="PostgreSQL" />
+          <span class="font-poppins skillname">PostgreSQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
     </section>
 
     <section class="px-4 py-8">
