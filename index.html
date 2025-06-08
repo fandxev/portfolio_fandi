@@ -88,29 +88,30 @@
 
 <body class="bg-[#0d0628] text-white">
 
-  <div class="container mx-auto px-8">
-    <header>
-      <nav class="flex justify-between items-center px-8 py-4 bg-[#10042b]">
-        <div class="text-2xl">⌛</div>
-        <button class="hamburger text-2xl md:hidden" id="hamburger">&#9776;</button>
-        <ul class="hidden md:flex gap-6 font-bold" id="nav-menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Lab</a></li>
-        </ul>
-      </nav>
 
-      <div
-        class="fixed top-0 right-[-100%] w-[250px] h-full bg-[#10042b] p-8 shadow-lg transition-all duration-300 z-[9999]"
-        id="popup-menu">
-        <button class="absolute top-4 right-4 text-2xl text-white" id="close-btn">&times;</button>
-        <ul class="mt-16 space-y-6 font-bold text-left">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Lab</a></li>
-        </ul>
-      </div>
-    </header>
+  <header class="mx-auto px-8 bg-[#1A0B2E]">
+    <nav class="flex justify-between items-center px-8 py-4">
+      <div class="text-2xl w-[24px] h-[24px]"><img class="" src="img/jt_logo.png" /></div>
+      <button class="hamburger text-2xl md:hidden" id="hamburger">&#9776;</button>
+      <ul class="hidden md:flex gap-6 font-bold" id="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Lab</a></li>
+      </ul>
+    </nav>
+
+    <div
+      class="fixed top-0 right-[-100%] w-[250px] h-full bg-[#10042b] p-8 shadow-lg transition-all duration-300 z-[9999]"
+      id="popup-menu">
+      <button class="absolute top-4 right-4 text-2xl text-white" id="close-btn">&times;</button>
+      <ul class="mt-16 space-y-6 font-bold text-left">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Lab</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="container mx-auto px-8">
 
     <main>
       <section class="text-center py-8">
@@ -283,13 +284,15 @@
       </section>
 
       <section id="section_project" class="px-4 py-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 relative">
+        <!-- start teks kiri gambar kanan -->
 
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 relative">
           <div class="flex flex-col">
             <h4 class="font-bold mb-1 featured-project font-poppins text-[12px]">Featured Project</h4>
             <h1 class="font-bold mb-4  font-poppins text-[24px]">Zona Mahasiswa Apps</h1>
             <span style="background-size: 100% 100%;"
-              class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-20 text-[10px] md:text-[14px]">
+              class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[660px]">
               A web app for visualizing personalized Spotify data. View your
               top artists, top tracks, recently played tracks, and detailed audio
               information about each track. Create and save new playlists of
@@ -297,7 +300,8 @@
             </span>
           </div>
 
-          <div class="w-full h-[180px] md:h-[320px] bg-[#1e0833] p-1.5 rounded-lg relative overflow-hidden z-20">
+          <div
+            class="w-full h-[180px] md:h-[280px] bg-[rgba(44,23,65,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
             <!-- Inner content (image container) -->
             <div
               class="absolute  z-20 top-0 left-0 mt-[18px] ml-[36px] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
@@ -314,6 +318,90 @@
                        blur-3xl opacity-100"></div>
 
         </div>
+
+        <!-- end teks kiri gambar kanan -->
+
+
+
+        <!-- start teks kanan gambar kiri -->
+
+
+        <div class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
+          <div class="md:order-2 flex flex-col">
+            <h4 class="font-bold mb-1 featured-project font-poppins text-[12px]">Featured Project</h4>
+            <h1 class="font-bold mb-4  font-poppins text-[24px]">Zona Mahasiswa Apps</h1>
+            <span style="background-size: 100% 100%;"
+              class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[660px] md:left-[-68px]">
+              A web app for visualizing personalized Spotify data. View your
+              top artists, top tracks, recently played tracks, and detailed audio
+              information about each track. Create and save new playlists of
+              recommended tracks basedx on your existing playlists and more.
+            </span>
+          </div>
+
+          <div
+            class="md:order-1 w-full h-[180px] md:h-[280px] bg-[rgba(44,23,65,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
+            <!-- Inner content (image container) -->
+            <div
+              class="absolute  z-20 top-0 left-0 mt-[18px] ml-[36px] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
+              <img src="img/kotlin 3d.png" alt="Content"
+                class="w-full z-20 h-full object-cover rounded-tl-xl relative" />
+            </div>
+          </div>
+          <!-- bg gradient -->
+          <div class="absolute top-1/2 left-1/2 
+                               -translate-x-1/2 -translate-y-1/2 
+                               translate-x-[calc(-50%-200px)] translate-y-[calc(-50%-10px)] 
+                               z-10 w-[45rem] h-[40rem] rounded-full 
+                               bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
+                               blur-3xl opacity-100"></div>
+
+        </div>
+
+        <!-- end teks kanan gambar kiri -->
+
+
+
+        <!-- start teks kiri gambar kanan -->
+
+
+        <div class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
+          <div class="flex flex-col">
+            <h4 class="font-bold mb-1 featured-project font-poppins text-[12px]">Featured Project</h4>
+            <h1 class="font-bold mb-4  font-poppins text-[24px]">Zona Mahasiswa Apps</h1>
+            <span style="background-size: 100% 100%;"
+              class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[660px]">
+              A web app for visualizing personalized Spotify data. View your
+              top artists, top tracks, recently played tracks, and detailed audio
+              information about each track. Create and save new playlists of
+              recommended tracks basedx on your existing playlists and more.
+            </span>
+          </div>
+
+          <div
+            class="w-full h-[180px] md:h-[280px] bg-[rgba(44,23,65,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
+            <!-- Inner content (image container) -->
+            <div
+              class="absolute  z-20 top-0 left-0 mt-[18px] ml-[36px] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
+              <img src="img/kotlin 3d.png" alt="Content"
+                class="w-full z-20 h-full object-cover rounded-tl-xl relative" />
+            </div>
+          </div>
+          <!-- bg gradient -->
+          <div class="absolute top-1/2 left-1/2 
+                                 -translate-x-1/2 -translate-y-1/2 
+                                 translate-x-[calc(-50%+200px)] translate-y-[calc(-50%-10px)] 
+                                 z-10 w-[45rem] h-[40rem] rounded-full 
+                                 bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
+                                 blur-3xl opacity-100"></div>
+
+        </div>
+
+        <!-- end teks kiri gambar kanan -->
+
+
+
+
       </section>
     </main>
 
