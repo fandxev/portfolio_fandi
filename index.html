@@ -65,6 +65,8 @@
 
 
 
+
+
     @media (min-width: 768px) {
       .md\:line-clamp-none {
         -webkit-line-clamp: unset;
@@ -89,7 +91,7 @@
 <body class="bg-[#0d0628] text-white">
 
 
-  <header class="mx-auto px-8 bg-[#1A0B2E]">
+  <header class="mx-auto px-8 bg-[rgba(13,6,42,1)]">
     <nav class="flex justify-between items-center px-8 py-4">
       <div class="text-2xl w-[24px] h-[24px]"><img class="" src="img/jt_logo.png" /></div>
       <button class="hamburger text-2xl md:hidden" id="hamburger">&#9776;</button>
@@ -114,18 +116,48 @@
   <div class="container mx-auto px-8">
 
     <main>
-      <section class="text-center py-8 px-4 md:px-32">
-        <img src="img/foto_fandi.jpg" alt="avatar"
-          class="w-[100px] h-[100px] rounded-full shadow-[0_0_20px_#8839ef] mx-auto" />
-        <p class="text-lg mt-4">I'm a Software Engineer.</p>
-        <p class="text-sm text-[#b0a9d9]">Currently in Malang East Java, Indonesia 🌽️</p>
-        <p class="mt-4 ">Hi, I'm Software Engineer with more than 2 years of experience in Programming. Im
+      <section class="text-center py-8 px-4 md:px-40">
+        <div class="flex gap-4 justify-center mx-auto md:px-[5.5rem] relative">
+
+
+          <!-- gambar panah non flex -->
+          <img src="img/arrow_profile.png" alt="avatar" class="hidden md:block w-[40px] h-[40px] absolute left-1/4" />
+
+
+
+          <img src="img/foto_fandi.jpg" alt="avatar"
+            class="w-[64px] h-[64px]  md:w-[100px] md:h-[100px] w-1/3 self-center md:self-end rounded-full shadow-[0_0_20px_#8839ef]" />
+
+          <div class="flex w-2/3  flex-col items-start">
+
+            <div class="flex justify-start items-start">
+              <p class="text-base md:text-lg self-start">
+                Hello! I Am <span class="text-purple-500 font-semibold">Fandi</span> </p>
+            </div>
+            <p class="mt-3 text-xs md:text-sm">A Programmer who</p>
+            <h1 class="mt-2 text-base md:text-lg font-bold leading-tight text-left">
+              Love to continously learn about <span
+                class="text-purple-500  decoration-purple-500 decoration-2 italic">Mobile</span> and <span
+                class="text-purple-500  decoration-purple-500 decoration-2 italic">Web</span> programming...
+            </h1>
+            <p class="mt-2 hidden md:block md:text-xs md:text-sm text-[#b0a9d9] text-left">Currently in Malang, East
+              java
+              Indonesia
+            </p>
+
+          </div>
+        </div>
+        <p class="block md:hidden mt-3 text-xs md:text-sm text-[#b0a9d9] text-center">Currently in Malang, East java
+          Indonesia
+        </p>
+
+        <p class="mt-10 md:mt-12 ">Hi, I'm Software Engineer with more than 2 years of experience in Programming. Im
           bachelor degree in Informatics Engineering from Universitas Malik Ibrahim Malang. My programming knowledge is
           in
           Mobile Programming (Native Android & Flutter), and also Web Development (Front End & Back End)</p>
       </section>
 
-      <section class="text-center px-4 md:px-32 py-8">
+      <section class="text-center px-4 md:px-32 py-10">
         <h2 class="text-2xl font-bold mb-4">Work Experience</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-0.5 bg-center bg-no-repeat"
           style="background-image: url('img/background-gradient.png'); background-size: 200px; background-position: center 20px;">
@@ -292,28 +324,40 @@
             <h4 class="font-bold mb-1 featured-project font-poppins text-[12px]">Featured Project</h4>
             <h1 class="font-bold mb-4  font-poppins text-[24px]">Zona Mahasiswa Apps</h1>
             <span style="background-size: 100% 100%;"
-              class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[660px]">
-              A web app for visualizing personalized Spotify data. View your
-              top artists, top tracks, recently played tracks, and detailed audio
-              information about each track. Create and save new playlists of
-              recommended tracks basedx on your existing playlists and more.
+              class=" bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[550px]">
+              Successfully launched "Zona Mahasiswa: Temukan forHat" on Play Store and App Store—an app combining news
+              and social
+              media. Used Flutter with BloC/Cubit for scalable architecture. Collaborated with business teams and
+              integrated backend
+              features like push notifications
             </span>
+            <div class="hidden md:block mt-3 pl-6">
+              <img src="https://skillicons.dev/icons?i=flutter" class="h-8 inline mr-2" alt="Flutter" />
+              <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
+              <img src="https://skillicons.dev/icons?i=laravel" class="h-8 inline mr-2" alt="Laravel" />
+            </div>
+
           </div>
 
-          <div
-            class="w-full h-[180px] md:h-[280px] bg-[rgba(44,23,65,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
+          <div class="w-full h-[180px] md:h-[280px] bg-[rgba(9,2,16,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
             <!-- Inner content (image container) -->
             <div
-              class="absolute  z-20 top-0 left-0 mt-[18px] ml-[36px] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
-              <img src="img/kotlin 3d.png" alt="Content"
-                class="w-full z-20 h-full object-cover rounded-tl-xl relative" />
+              class="absolute  z-20 top-0 left-0 mt-[18px] bg-[rgba(44,23,65,1)] ml-[36px] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
+              <img src="img/featured_portfolio_apps_zm.png" alt="Content"
+                class="w-full z-20 h-full object-cover object-right-bottom rounded-tl-xl relative" />
             </div>
           </div>
+          <div class="block md:hidden mt-3 pl-6">
+            <img src="https://skillicons.dev/icons?i=flutter" class="h-8 inline mr-2" alt="Flutter" />
+            <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
+            <img src="https://skillicons.dev/icons?i=laravel" class="h-8 inline mr-2" alt="Laravel" />
+          </div>
+
           <!-- bg gradient -->
           <div class="absolute top-1/2 left-1/2 
                        -translate-x-1/2 -translate-y-1/2 
                        translate-x-[calc(-50%+200px)] translate-y-[calc(-50%-10px)] 
-                       z-10 w-[45rem] h-[40rem] rounded-full 
+                       z-10 w-[40rem] h-[35rem] rounded-full 
                        bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
                        blur-3xl opacity-100"></div>
 
@@ -329,30 +373,42 @@
         <div class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
           <div class="md:order-2 flex flex-col">
             <h4 class="font-bold mb-1 featured-project font-poppins text-[12px]">Featured Project</h4>
-            <h1 class="font-bold mb-4  font-poppins text-[24px]">Zona Mahasiswa Apps</h1>
+            <h1 class="font-bold mb-4  font-poppins text-[24px]">Zona Mahasiswa Web</h1>
             <span style="background-size: 100% 100%;"
               class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[660px] md:left-[-68px]">
-              A web app for visualizing personalized Spotify data. View your
-              top artists, top tracks, recently played tracks, and detailed audio
-              information about each track. Create and save new playlists of
-              recommended tracks basedx on your existing playlists and more.
+              Successfully built and launched https://zonamahasiswa.id, a student-focused news portal with tens of
+              thousands of
+              monthly visitors. Developed responsive web design using HTML5, CSS3, JavaScript, jQuery, and Bootstrap.
+              Coordinated with
+              stakeholders to implement their requirements.
             </span>
+            <div class="hidden md:block mt-3 pl-6">
+              <img src="https://skillicons.dev/icons?i=php" class="h-8 inline mr-2" alt="PHP" />
+              <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="Bootstrap" />
+              <img src="https://skillicons.dev/icons?i=javascript" class="h-8 inline mr-2" alt="Javascript" />
+            </div>
           </div>
 
           <div
-            class="md:order-1 w-full h-[180px] md:h-[280px] bg-[rgba(44,23,65,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
+            class="md:order-1 w-full h-[180px] md:h-[280px] bg-[rgba(9,2,16,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
             <!-- Inner content (image container) -->
             <div
-              class="absolute  z-20 top-0 left-0 mt-[18px] ml-[36px] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
-              <img src="img/kotlin 3d.png" alt="Content"
+              class="absolute  z-20 top-0 left-0 mt-[18px] ml-[36px] bg-[rgba(55,30,80,1)] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
+              <img src="img/featured2_portfolio_apps_zm.png" alt="Content"
                 class="w-full z-20 h-full object-cover rounded-tl-xl relative" />
             </div>
+          </div>
+
+          <div class="block md:hidden mt-3 pl-6">
+            <img src="https://skillicons.dev/icons?i=php" class="h-8 inline mr-2" alt="PHP" />
+            <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="Bootstrap" />
+            <img src="https://skillicons.dev/icons?i=javascript" class="h-8 inline mr-2" alt="Javascript" />
           </div>
           <!-- bg gradient -->
           <div class="absolute top-1/2 left-1/2 
                                -translate-x-1/2 -translate-y-1/2 
                                translate-x-[calc(-50%-200px)] translate-y-[calc(-50%-10px)] 
-                               z-10 w-[45rem] h-[40rem] rounded-full 
+                               z-10 w-[40rem] h-[35rem] rounded-full 
                                bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
                                blur-3xl opacity-100"></div>
 
@@ -368,30 +424,38 @@
         <div class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
           <div class="flex flex-col">
             <h4 class="font-bold mb-1 featured-project font-poppins text-[12px]">Featured Project</h4>
-            <h1 class="font-bold mb-4  font-poppins text-[24px]">Zona Mahasiswa Apps</h1>
+            <h1 class="font-bold mb-4  font-poppins text-[24px]">Benerin Apps</h1>
             <span style="background-size: 100% 100%;"
-              class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[660px]">
-              A web app for visualizing personalized Spotify data. View your
-              top artists, top tracks, recently played tracks, and detailed audio
-              information about each track. Create and save new playlists of
-              recommended tracks basedx on your existing playlists and more.
+              class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[550px]">
+              Successfully created and launched "Benerin", a home repair and construction service app. Collaborated with
+              development
+              teams to plan and build the app, focusing on mobile development and seamless integration with backend
+              RESTful APIs.
             </span>
+            <div class="hidden md:block mt-3 pl-6">
+              <img src="https://skillicons.dev/icons?i=java" class="h-8 inline mr-2" alt="Java" />
+              <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
+            </div>
           </div>
 
-          <div
-            class="w-full h-[180px] md:h-[280px] bg-[rgba(44,23,65,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
+          <div class="w-full h-[180px] md:h-[280px] bg-[rgba(9,2,16,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
             <!-- Inner content (image container) -->
             <div
-              class="absolute  z-20 top-0 left-0 mt-[18px] ml-[36px] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
-              <img src="img/kotlin 3d.png" alt="Content"
+              class="absolute bg-[rgba(55,30,80,1)] z-20 top-0 left-0 mt-[18px] ml-[36px] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
+              <img src="img/featured3_portfolio_apps_zm.png" alt="Content"
                 class="w-full z-20 h-full object-cover rounded-tl-xl relative" />
             </div>
+          </div>
+
+          <div class="block md:hidden mt-3 pl-6">
+            <img src="https://skillicons.dev/icons?i=java" class="h-8 inline mr-2" alt="Java" />
+            <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
           </div>
           <!-- bg gradient -->
           <div class="absolute top-1/2 left-1/2 
                                  -translate-x-1/2 -translate-y-1/2 
                                  translate-x-[calc(-50%+200px)] translate-y-[calc(-50%-10px)] 
-                                 z-10 w-[45rem] h-[40rem] rounded-full 
+                                 z-10 w-[25rem] h-[20rem] rounded-full 
                                  bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
                                  blur-3xl opacity-100"></div>
 
@@ -405,38 +469,44 @@
       </section>
     </main>
 
-    <footer class="text-center py-8 bg-[#10042b]">
-      <p>Contact: email@example.com</p>
-      <div class="flex justify-center gap-4 text-xl mt-2">
-        <a href="#">🌐</a>
-        <a href="#">🐦</a>
-        <a href="#">💼</a>
-      </div>
-    </footer>
+  </div>
 
-    <script>
-      const hamburger = document.getElementById('hamburger');
-      const popupMenu = document.getElementById('popup-menu');
-      const closeBtn = document.getElementById('close-btn');
 
-      hamburger.addEventListener('click', () => {
-        popupMenu.classList.add('right-0');
-        popupMenu.classList.remove('right-[-100%]');
-      });
+  <footer class="bg-[rgba(13,6,35,0.7)] mt-20">
+    <section class="pt-8 pb-12  px-4 md:px-40">
+      <p class="py-4 font-bold">Contact</p>
+      <p class="text-[12px] py-4">If you are interested in collaborating with me, hiring me, or simply having
+        discussion,
+        feel free to reach
+        out to me through:</p>
+      <p class="text-[12px] py-1">Email: fandyjoansyah@gmail.com</p>
+      <p class="text-[12px] py-1">Phone Number: +6289637499734</p>
+      <p class="text-[12px] py-1">LinkedIn: https://www.linkedin.com/in/fandy-ahmad-joansyah/</p>
+    </section>
+  </footer>
 
-      closeBtn.addEventListener('click', () => {
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const popupMenu = document.getElementById('popup-menu');
+    const closeBtn = document.getElementById('close-btn');
+
+    hamburger.addEventListener('click', () => {
+      popupMenu.classList.add('right-0');
+      popupMenu.classList.remove('right-[-100%]');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      popupMenu.classList.add('right-[-100%]');
+      popupMenu.classList.remove('right-0');
+    });
+
+    window.addEventListener('click', function (e) {
+      if (e.target === popupMenu) {
         popupMenu.classList.add('right-[-100%]');
         popupMenu.classList.remove('right-0');
-      });
-
-      window.addEventListener('click', function (e) {
-        if (e.target === popupMenu) {
-          popupMenu.classList.add('right-[-100%]');
-          popupMenu.classList.remove('right-0');
-        }
-      });
-    </script>
-  </div>
+      }
+    });
+  </script>
 </body>
 
 </html>
