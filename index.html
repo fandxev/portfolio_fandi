@@ -17,6 +17,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
 
+
+
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script src="jquery.connections.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -39,6 +41,23 @@
   </script>
 
   <style>
+    #section_project {
+      overflow-x: visible;
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE 10+ */
+    }
+
+    #section_project::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari */
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     * {
       font-family: 'McLaren', sans-serif;
     }
@@ -65,6 +84,11 @@
       border-radius: 180%;
 
       /* background-color: beige; */
+    }
+
+    .gitlab {
+      background-image: url('img/background-gradient.png');
+
     }
 
 
@@ -100,9 +124,9 @@
       <div class="text-2xl w-[24px] h-[24px]"><img class="" src="img/jt_logo.png" /></div>
       <button class="hamburger text-2xl md:hidden" id="hamburger">&#9776;</button>
       <ul class="hidden md:flex gap-6 font-bold" id="nav-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Lab</a></li>
+        <li><a href="#work_experience">Work Experience</a></li>
+        <li><a href="#">Skill</a></li>
+        <li><a href="#">Project</a></li>
       </ul>
     </nav>
 
@@ -120,7 +144,8 @@
   <div class="container mx-auto px-8">
 
     <main>
-      <section class="text-center py-8 px-4 md:px-40">
+      <section data-aos-easing="ease-in-out" data-aos="fade" data-aos-once="true" data-aos-duration="600"
+        class="text-center py-8 px-4 md:px-40">
         <div class="flex gap-4 justify-center mx-auto md:px-[5.5rem] relative">
 
 
@@ -155,323 +180,393 @@
           Indonesia
         </p>
 
-        <p class="mt-10 md:mt-12 ">Hi, I'm Software Engineer with more than 2 years of experience in Programming. Im
+        <p class=" mx-auto mt-16 mb-16 md:mt-16 text-3xl">I'm a <span class="text-purple-500 font-semibold">Mobile Apps
+            Developer</span> and
+          <span class="text-purple-500 font-semibold">Web Developer</span>
+        </p>
+
+        <p class="text-xl">Hi, I'm Software Engineer with more than 2 years of experience in Programming. Im
           bachelor degree in Informatics Engineering from Universitas Malik Ibrahim Malang. My programming knowledge is
           in
           Mobile Programming (Native Android & Flutter), and also Web Development (Front End & Back End)</p>
-      </section>
 
-      <section data-aos="fade-up" class="text-center px-4 md:px-32 py-10">
-        <h2 class="text-2xl font-bold mb-4">Work Experience</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-0.5 bg-center bg-no-repeat"
-          style="background-image: url('img/background-gradient.png'); background-size: 200px; background-position: center 20px;">
-          <div class="flex p-6 sm:w-[400px] h-auto bg-cover sm:place-self-end"
-            style="background-image: url('img/rect-1.png');">
-            <img src="img/icon_mobile_development.png" alt="icon_mobile_dev" class="w-[80px] self-start" />
-            <div class="ml-4 text-left">
-              <h1 class="font-bold">Mobile Apps Developer</h1>
-              <p class="text-[9px] my-2">My main skill in Software Engineering using Kotlin/Java and Flutter</p>
-              <button
-                class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
-            </div>
-          </div>
+        <div class="flex justify-center gap-20 mt-16">
 
-          <div class="flex p-6 sm:w-[400px] h-auto bg-cover" style="background-image: url('img/rect-2.png');">
-            <img src="img/icon_web_development.png" alt="icon_web_dev" class="w-[80px] self-start" />
-            <div class="ml-4 text-left">
-              <h1 class="font-bold">Web Developer</h1>
-              <p class="text-[9px] my-2">Make website using HTML, CSS, Javascript, Jquery, PHP, and Vue</p>
-              <button
-                class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
-            </div>
-          </div>
+          <a href="https://drive.usercontent.google.com/uc?id=1BRbLYGUF5SJIkCjnuimVJSYxy7oDbpqT&export=download"
+            target="_blank"
+            class="flex items-center justify-center px-6 py-3 font-semibold text-gray-200 bg-gray-800 rounded-md transition-all duration-500 ease-in-out transform hover:bg-violet-500 hover:scale-[1.2]">
+            <span class="">Download CV</span>
+          </a>
 
+          <a href="https://gitlab.com/fandx" target="_blank" rel="noopener noreferrer"
+            class="group relative p-2 w-24 h-24 block">
 
+            <!-- icon normal -->
+            <img src="img/gitlab_inactive.svg" alt="normal"
+              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform group-hover:opacity-0 group-hover:scale-[1.2]">
 
-          <div class="flex p-6 sm:w-[400px] h-auto bg-cover sm:place-self-end"
-            style="background-image: url('img/rect-3.png');">
-            <img src="img/icon_database_administrator.png" alt="icon_db_admin" class="w-[80px] self-start" />
-            <div class="ml-4 text-left">
-              <h1 class="font-bold">SQL Database</h1>
-              <p class="text-[9px] my-2">Designing Effective RDBMS Schema using MySQL/PostgreSQL</p>
-              <button
-                class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
-            </div>
-          </div>
+            <!-- icon saat hover -->
+            <img src="img/gitlab_active.svg" alt="hover"
+              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:scale-[1.2]">
+          </a>
+
+          <a href="https://github.com/fandxev" target="_blank" rel="noopener noreferrer"
+            class="group relative p-2 w-24 h-24 block">
+
+            <!-- icon normal -->
+            <img src="img/github_inactive.svg" alt="normal"
+              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform group-hover:opacity-0 group-hover:scale-[1.2]">
+
+            <!-- icon saat hover -->
+            <img src="img/github_active.svg" alt="hover"
+              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:scale-[1.2]">
+          </a>
 
 
-          <div class="flex p-6 sm:w-[400px] h-auto bg-cover" style="background-image: url('img/rect-4.png');">
-            <img src="img/icon_fullstack_development.png" alt="icon_fullstack_dev" class="w-[80px] self-start" />
-            <div class="ml-4 text-left">
-              <h1 class="font-bold">Fullstack Developer</h1>
-              <p class="text-[9px] my-2">Make website using HTML, CSS, Javascript, Jquery, PHP, and Vue</p>
-              <button
-                class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
-            </div>
-          </div>
-        </div>
-      </section>
+          <a href="https://www.instagram.com/fandyjoansyah5758" target="_blank" rel="noopener noreferrer"
+            class="group relative p-2 w-24 h-24 block">
 
-      <section class="text-center py-8 px-4 md:px-32 lg:px-20">
-        <p class="text-lg font-bold">Skills</p>
+            <!-- icon normal -->
+            <img src="img/instagram_inactive.svg" alt="normal"
+              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform group-hover:opacity-0 group-hover:scale-[1.2]">
 
-        <!-- Skill Categories -->
-        <div class="mt-8 flex flex-col md:flex-row gap-6 justify-center items-stretch">
-          <!-- Front End Mobile -->
-          <div id="box_skill_mobile"
-            class="bg-[#2C1250] border-[#693B93] border rounded-xl p-4 pt-6 pb-6 w-full md:w-1/3">
-            <h3 class="text-lg font-bold mb-6 font-poppins">Front End Mobile</h3>
-            <div class="flex flex-wrap justify-center gap-4">
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=flutter" class="h-8" alt="Flutter" />
-                <span class="font-poppins skillname">Flutter</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=kotlin" class="h-8" alt="Kotlin" />
-                <span class="font-poppins skillname">Kotlin</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Front End Web -->
-          <div id="box_skill_fe" class="bg-[#2C1250] border-[#693B93] border rounded-xl p-4 pt-6 pb-6 w-full md:w-1/3">
-            <h3 class="text-lg font-bold mb-6 font-poppins">Front End Web</h3>
-            <div class="flex flex-wrap justify-center gap-4">
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=html" class="h-8" alt="HTML" />
-                <span class="font-poppins skillname">HTML</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=css" class="h-8" alt="CSS" />
-                <span class="font-poppins skillname">CSS</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8" alt="bootstrap" />
-                <span class="font-poppins skillname">Bootstrap</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=tailwind" class="h-8" alt="tailwind" />
-                <span class="font-poppins skillname">Tailwind</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=js" class="h-8" alt="JavaScript" />
-                <span class="font-poppins skillname">JavaScript</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=jquery" class="h-8" alt="jQuery" />
-                <span class="font-poppins skillname">jQuery</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=vue" class="h-8" alt="Vue" />
-                <span class="font-poppins skillname">Vue</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Back End -->
-          <div id="box_skill_be" class="bg-[#2C1250] border-[#693B93] border rounded-xl p-4 pt-6 pb-6 w-full md:w-1/3">
-            <h3 class="text-lg font-bold mb-6 font-bold font-poppins">Back End</h3>
-            <div class="flex flex-wrap justify-center gap-4">
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=php" class="h-8" alt="PHP" />
-                <span class="font-poppins skillname">PHP</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=laravel" class="h-8" alt="Laravel" />
-                <span class="font-poppins skillname">Laravel</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=nodejs" class="h-8" alt="NodeJS" />
-                <span class="font-poppins skillname">Node.js</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=express" class="h-8" alt="ExpressJS" />
-                <span class="font-poppins skillname">Express</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=nestjs" class="h-8" alt="NestJS" />
-                <span class="font-poppins skillname">NestJS</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=mysql" class="h-8" alt="MySQL" />
-                <span class="font-poppins skillname">MySQL</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="https://skillicons.dev/icons?i=postgres" class="h-8" alt="PostgreSQL" />
-                <span class="font-poppins skillname">PostgreSQL</span>
-              </div>
-            </div>
-          </div>
+            <!-- icon saat hover -->
+            <img src="img/instagram_active.svg" alt="hover"
+              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:scale-[1.2]">
+          </a>
 
 
+          <a href="https://www.linkedin.com/in/fandy-ahmad-joansyah" target="_blank" rel="noopener noreferrer"
+            class="group relative p-2 w-24 h-24 block">
 
+            <!-- icon normal -->
+            <img src="img/linkedin_inactive.svg" alt="normal"
+              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform group-hover:opacity-0 group-hover:scale-[1.2]">
 
-
+            <!-- icon saat hover -->
+            <img src="img/linkedin_active.svg" alt="hover"
+              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:scale-[1.2]">
+          </a>
         </div>
 
+  </div>
+  </section>
 
-      </section>
+  <section id="work_experience" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000" data-aos-offset="300"
+    class="text-center px-4 md:px-32 py-10">
+    <h2 class="text-2xl font-bold mb-4">Work Experience</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-0.5 bg-center bg-no-repeat"
+      style="background-image: url('img/background-gradient.png'); background-size: 200px; background-position: center 20px;">
+      <div class="flex p-6 sm:w-[400px] h-auto bg-cover sm:place-self-end"
+        style="background-image: url('img/rect-1.png');">
+        <img src="img/icon_mobile_development.png" alt="icon_mobile_dev" class="w-[80px] self-start" />
+        <div class="ml-4 text-left">
+          <h1 class="font-bold">Mobile Apps Developer</h1>
+          <p class="text-[9px] my-2">My main skill in Software Engineering using Kotlin/Java and Flutter</p>
+          <button
+            class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
+        </div>
+      </div>
 
-      <section id="section_globe" class="relative mt-[40px] lg:mt-[100px] px-4 md:px-32">
-        <img id="circle_jt" src="img/jt_circle.webp"
-          class="absolute top-0 left-1/2 transform -translate-x-1/2 scale-[0.25] lg:scale-[0.3] origin-top" alt="">
-        <img id="bg_circle_jt" class="relative left-[16px] lg:left-[50px] top-[20px] lg:top-[-72px]  w-full h-auto"
-          src="img/bg_circle_jt.webp">
-      </section>
+      <div class="flex p-6 sm:w-[400px] h-auto bg-cover" style="background-image: url('img/rect-2.png');">
+        <img src="img/icon_web_development.png" alt="icon_web_dev" class="w-[80px] self-start" />
+        <div class="ml-4 text-left">
+          <h1 class="font-bold">Web Developer</h1>
+          <p class="text-[9px] my-2">Make website using HTML, CSS, Javascript, Jquery, PHP, and Vue</p>
+          <button
+            class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
+        </div>
+      </div>
 
-      <section id="section_project" class="px-4 md:px-32 py-8">
-        <!-- start teks kiri gambar kanan -->
 
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 relative">
-          <div class="flex flex-col">
-            <h4 class="font-bold mb-1 featured-project font-poppins text-[12px]">Featured Project</h4>
-            <h1 class="font-bold mb-4  font-poppins text-[24px]">Zona Mahasiswa Apps</h1>
-            <span style="background-size: 100% 100%;"
-              class=" bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[550px]">
-              Successfully launched "Zona Mahasiswa: Temukan forHat" on Play Store and App Store—an app combining news
-              and social
-              media. Used Flutter with BloC/Cubit for scalable architecture. Collaborated with business teams and
-              integrated backend
-              features like push notifications
-            </span>
-            <div class="hidden md:block mt-3 pl-6">
-              <img src="https://skillicons.dev/icons?i=flutter" class="h-8 inline mr-2" alt="Flutter" />
-              <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
-              <img src="https://skillicons.dev/icons?i=laravel" class="h-8 inline mr-2" alt="Laravel" />
-            </div>
+      <div class="flex p-6 sm:w-[400px] h-auto bg-cover sm:place-self-end"
+        style="background-image: url('img/rect-3.png');">
+        <img src="img/icon_database_administrator.png" alt="icon_db_admin" class="w-[80px] self-start" />
+        <div class="ml-4 text-left">
+          <h1 class="font-bold">SQL Database</h1>
+          <p class="text-[9px] my-2">Designing Effective RDBMS Schema using MySQL/PostgreSQL</p>
+          <button
+            class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
+        </div>
+      </div>
 
+
+      <div class="flex p-6 sm:w-[400px] h-auto bg-cover" style="background-image: url('img/rect-4.png');">
+        <img src="img/icon_fullstack_development.png" alt="icon_fullstack_dev" class="w-[80px] self-start" />
+        <div class="ml-4 text-left">
+          <h1 class="font-bold">Fullstack Developer</h1>
+          <p class="text-[9px] my-2">Make website using HTML, CSS, Javascript, Jquery, PHP, and Vue</p>
+          <button
+            class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-offset="200"
+    class="text-center py-8 px-4 md:px-32 lg:px-20">
+    <p class="text-lg font-bold">Skills</p>
+
+    <!-- Skill Categories -->
+    <div class="mt-8 flex flex-col md:flex-row gap-6 justify-center items-stretch">
+      <!-- Front End Mobile -->
+      <div id="box_skill_mobile" class="bg-[#2C1250] border-[#693B93] border rounded-xl p-4 pt-6 pb-6 w-full md:w-1/3">
+        <h3 class="text-lg font-bold mb-6 font-poppins">Front End Mobile</h3>
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=flutter" class="h-8" alt="Flutter" />
+            <span class="font-poppins skillname">Flutter</span>
           </div>
-
-          <div class="w-full h-[180px] md:h-[280px] bg-[rgba(9,2,16,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
-            <!-- Inner content (image container) -->
-            <div
-              class="absolute  z-20 top-0 left-0 mt-[18px] bg-[rgba(44,23,65,1)] ml-[36px] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
-              <img src="img/featured_portfolio_apps_zm.png" alt="Content"
-                class="w-full z-20 h-full object-cover object-right-bottom rounded-tl-xl relative" />
-            </div>
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=kotlin" class="h-8" alt="Kotlin" />
+            <span class="font-poppins skillname">Kotlin</span>
           </div>
-          <div class="block md:hidden mt-3 pl-6">
-            <img src="https://skillicons.dev/icons?i=flutter" class="h-8 inline mr-2" alt="Flutter" />
-            <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
-            <img src="https://skillicons.dev/icons?i=laravel" class="h-8 inline mr-2" alt="Laravel" />
-          </div>
+        </div>
+      </div>
 
-          <!-- bg gradient -->
-          <div class="absolute top-1/2 left-1/2 
+      <!-- Front End Web -->
+      <div id="box_skill_fe" class="bg-[#2C1250] border-[#693B93] border rounded-xl p-4 pt-6 pb-6 w-full md:w-1/3">
+        <h3 class="text-lg font-bold mb-6 font-poppins">Front End Web</h3>
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=html" class="h-8" alt="HTML" />
+            <span class="font-poppins skillname">HTML</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=css" class="h-8" alt="CSS" />
+            <span class="font-poppins skillname">CSS</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8" alt="bootstrap" />
+            <span class="font-poppins skillname">Bootstrap</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=tailwind" class="h-8" alt="tailwind" />
+            <span class="font-poppins skillname">Tailwind</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=js" class="h-8" alt="JavaScript" />
+            <span class="font-poppins skillname">JavaScript</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=jquery" class="h-8" alt="jQuery" />
+            <span class="font-poppins skillname">jQuery</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=vue" class="h-8" alt="Vue" />
+            <span class="font-poppins skillname">Vue</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back End -->
+      <div id="box_skill_be" class="bg-[#2C1250] border-[#693B93] border rounded-xl p-4 pt-6 pb-6 w-full md:w-1/3">
+        <h3 class="text-lg font-bold mb-6 font-bold font-poppins">Back End</h3>
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=php" class="h-8" alt="PHP" />
+            <span class="font-poppins skillname">PHP</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=laravel" class="h-8" alt="Laravel" />
+            <span class="font-poppins skillname">Laravel</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=nodejs" class="h-8" alt="NodeJS" />
+            <span class="font-poppins skillname">Node.js</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=express" class="h-8" alt="ExpressJS" />
+            <span class="font-poppins skillname">Express</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=nestjs" class="h-8" alt="NestJS" />
+            <span class="font-poppins skillname">NestJS</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=mysql" class="h-8" alt="MySQL" />
+            <span class="font-poppins skillname">MySQL</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="https://skillicons.dev/icons?i=postgres" class="h-8" alt="PostgreSQL" />
+            <span class="font-poppins skillname">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+
+  </section>
+
+  <section id="section_globe" class="relative mt-[40px] lg:mt-[100px] px-4 md:px-32">
+    <img id="circle_jt" src="img/jt_circle.webp"
+      class="absolute top-0 left-1/2 transform -translate-x-1/2 scale-[0.25] lg:scale-[0.3] origin-top" alt="">
+    <img id="bg_circle_jt" class="relative left-[16px] lg:left-[50px] top-[20px] lg:top-[-72px]  w-full h-auto"
+      src="img/bg_circle_jt.webp">
+  </section>
+
+  <section id="section_project" class="overflow-x-hidden px-4 md:px-32 py-8">
+    <!-- start teks kiri gambar kanan -->
+
+
+    <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-offset="200"
+      class="grid grid-cols-1 md:grid-cols-2 gap-2 relative">
+      <div class="flex flex-col">
+        <h4 class="font-bold mb-1 featured-project font-poppins text-[12px]">Featured Project</h4>
+        <h1 class="font-bold mb-4  font-poppins text-[24px]">Zona Mahasiswa Apps</h1>
+        <span style="background-size: 100% 100%;"
+          class=" bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[550px]">
+          Successfully launched "Zona Mahasiswa: Temukan forHat" on Play Store and App Store—an app combining news
+          and social
+          media. Used Flutter with BloC/Cubit for scalable architecture. Collaborated with business teams and
+          integrated backend
+          features like push notifications
+        </span>
+        <div class="hidden md:block mt-3 pl-6">
+          <img src="https://skillicons.dev/icons?i=flutter" class="h-8 inline mr-2" alt="Flutter" />
+          <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
+          <img src="https://skillicons.dev/icons?i=laravel" class="h-8 inline mr-2" alt="Laravel" />
+        </div>
+
+      </div>
+
+      <div class="w-full h-[180px] md:h-[280px] bg-[rgba(9,2,16,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
+        <!-- Inner content (image container) -->
+        <div
+          class="absolute  z-20 top-0 left-0 mt-[18px] bg-[rgba(44,23,65,1)] ml-[36px] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
+          <img src="img/featured_portfolio_apps_zm.png" alt="Content"
+            class="w-full z-20 h-full object-cover object-right-bottom rounded-tl-xl relative" />
+        </div>
+      </div>
+      <div class="block md:hidden mt-3 pl-6">
+        <img src="https://skillicons.dev/icons?i=flutter" class="h-8 inline mr-2" alt="Flutter" />
+        <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
+        <img src="https://skillicons.dev/icons?i=laravel" class="h-8 inline mr-2" alt="Laravel" />
+      </div>
+
+      <!-- bg gradient -->
+      <div class="absolute top-1/2 left-1/2 
                        -translate-x-1/2 -translate-y-1/2 
                        translate-x-[calc(-50%+200px)] translate-y-[calc(-50%-10px)] 
                        z-10 w-[40rem] h-[35rem] rounded-full 
                        bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
                        blur-3xl opacity-100"></div>
 
+    </div>
+
+    <!-- end teks kiri gambar kanan -->
+
+
+
+    <!-- start teks kanan gambar kiri -->
+
+
+    <div data-aos="fade-left" data-aos-duration="1500" data-aos-once="true"
+      class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
+      <div class="md:order-2 flex flex-col">
+        <h4 class="font-bold mb-1 featured-project font-poppins text-[12px]">Featured Project</h4>
+        <h1 class="font-bold mb-4  font-poppins text-[24px]">Zona Mahasiswa Web</h1>
+        <span style="background-size: 100% 100%;"
+          class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[660px] md:left-[-68px]">
+          Successfully built and launched https://zonamahasiswa.id, a student-focused news portal with tens of
+          thousands of
+          monthly visitors. Developed responsive web design using HTML5, CSS3, JavaScript, jQuery, and Bootstrap.
+          Coordinated with
+          stakeholders to implement their requirements.
+        </span>
+        <div class="hidden md:block mt-3 pl-6">
+          <img src="https://skillicons.dev/icons?i=php" class="h-8 inline mr-2" alt="PHP" />
+          <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="Bootstrap" />
+          <img src="https://skillicons.dev/icons?i=javascript" class="h-8 inline mr-2" alt="Javascript" />
         </div>
+      </div>
 
-        <!-- end teks kiri gambar kanan -->
+      <div
+        class="md:order-1 w-full h-[180px] md:h-[280px] bg-[rgba(9,2,16,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
+        <!-- Inner content (image container) -->
+        <div
+          class="absolute  z-20 top-0 left-0 mt-[18px] ml-[36px] bg-[rgba(55,30,80,1)] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
+          <img src="img/featured2_portfolio_apps_zm.png" alt="Content"
+            class="w-full z-20 h-full object-cover rounded-tl-xl relative" />
+        </div>
+      </div>
 
-
-
-        <!-- start teks kanan gambar kiri -->
-
-
-        <div class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
-          <div class="md:order-2 flex flex-col">
-            <h4 class="font-bold mb-1 featured-project font-poppins text-[12px]">Featured Project</h4>
-            <h1 class="font-bold mb-4  font-poppins text-[24px]">Zona Mahasiswa Web</h1>
-            <span style="background-size: 100% 100%;"
-              class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[660px] md:left-[-68px]">
-              Successfully built and launched https://zonamahasiswa.id, a student-focused news portal with tens of
-              thousands of
-              monthly visitors. Developed responsive web design using HTML5, CSS3, JavaScript, jQuery, and Bootstrap.
-              Coordinated with
-              stakeholders to implement their requirements.
-            </span>
-            <div class="hidden md:block mt-3 pl-6">
-              <img src="https://skillicons.dev/icons?i=php" class="h-8 inline mr-2" alt="PHP" />
-              <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="Bootstrap" />
-              <img src="https://skillicons.dev/icons?i=javascript" class="h-8 inline mr-2" alt="Javascript" />
-            </div>
-          </div>
-
-          <div
-            class="md:order-1 w-full h-[180px] md:h-[280px] bg-[rgba(9,2,16,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
-            <!-- Inner content (image container) -->
-            <div
-              class="absolute  z-20 top-0 left-0 mt-[18px] ml-[36px] bg-[rgba(55,30,80,1)] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
-              <img src="img/featured2_portfolio_apps_zm.png" alt="Content"
-                class="w-full z-20 h-full object-cover rounded-tl-xl relative" />
-            </div>
-          </div>
-
-          <div class="block md:hidden mt-3 pl-6">
-            <img src="https://skillicons.dev/icons?i=php" class="h-8 inline mr-2" alt="PHP" />
-            <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="Bootstrap" />
-            <img src="https://skillicons.dev/icons?i=javascript" class="h-8 inline mr-2" alt="Javascript" />
-          </div>
-          <!-- bg gradient -->
-          <div class="absolute top-1/2 left-1/2 
+      <div class="block md:hidden mt-3 pl-6">
+        <img src="https://skillicons.dev/icons?i=php" class="h-8 inline mr-2" alt="PHP" />
+        <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="Bootstrap" />
+        <img src="https://skillicons.dev/icons?i=javascript" class="h-8 inline mr-2" alt="Javascript" />
+      </div>
+      <!-- bg gradient -->
+      <div class="absolute top-1/2 left-1/2 
                                -translate-x-1/2 -translate-y-1/2 
                                translate-x-[calc(-50%-200px)] translate-y-[calc(-50%-10px)] 
                                z-10 w-[40rem] h-[35rem] rounded-full 
                                bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
                                blur-3xl opacity-100"></div>
 
+    </div>
+
+    <!-- end teks kanan gambar kiri -->
+
+
+
+    <!-- start teks kiri gambar kanan -->
+
+
+    <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-offset="200"
+      class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
+      <div class="flex flex-col">
+        <h4 class="font-bold mb-1 featured-project font-poppins text-[12px]">Featured Project</h4>
+        <h1 class="font-bold mb-4  font-poppins text-[24px]">Benerin Apps</h1>
+        <span style="background-size: 100% 100%;"
+          class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[550px]">
+          Successfully created and launched "Benerin", a home repair and construction service app. Collaborated with
+          development
+          teams to plan and build the app, focusing on mobile development and seamless integration with backend
+          RESTful APIs.
+        </span>
+        <div class="hidden md:block mt-3 pl-6">
+          <img src="https://skillicons.dev/icons?i=java" class="h-8 inline mr-2" alt="Java" />
+          <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
         </div>
+      </div>
 
-        <!-- end teks kanan gambar kiri -->
+      <div class="w-full h-[180px] md:h-[280px] bg-[rgba(9,2,16,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
+        <!-- Inner content (image container) -->
+        <div
+          class="absolute bg-[rgba(55,30,80,1)] z-20 top-0 left-0 mt-[18px] ml-[36px] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
+          <img src="img/featured3_portfolio_apps_zm.png" alt="Content"
+            class="w-full z-20 h-full object-cover rounded-tl-xl relative" />
+        </div>
+      </div>
 
-
-
-        <!-- start teks kiri gambar kanan -->
-
-
-        <div class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
-          <div class="flex flex-col">
-            <h4 class="font-bold mb-1 featured-project font-poppins text-[12px]">Featured Project</h4>
-            <h1 class="font-bold mb-4  font-poppins text-[24px]">Benerin Apps</h1>
-            <span style="background-size: 100% 100%;"
-              class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[550px]">
-              Successfully created and launched "Benerin", a home repair and construction service app. Collaborated with
-              development
-              teams to plan and build the app, focusing on mobile development and seamless integration with backend
-              RESTful APIs.
-            </span>
-            <div class="hidden md:block mt-3 pl-6">
-              <img src="https://skillicons.dev/icons?i=java" class="h-8 inline mr-2" alt="Java" />
-              <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
-            </div>
-          </div>
-
-          <div class="w-full h-[180px] md:h-[280px] bg-[rgba(9,2,16,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
-            <!-- Inner content (image container) -->
-            <div
-              class="absolute bg-[rgba(55,30,80,1)] z-20 top-0 left-0 mt-[18px] ml-[36px] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
-              <img src="img/featured3_portfolio_apps_zm.png" alt="Content"
-                class="w-full z-20 h-full object-cover rounded-tl-xl relative" />
-            </div>
-          </div>
-
-          <div class="block md:hidden mt-3 pl-6">
-            <img src="https://skillicons.dev/icons?i=java" class="h-8 inline mr-2" alt="Java" />
-            <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
-          </div>
-          <!-- bg gradient -->
-          <div class="absolute top-1/2 left-1/2 
+      <div class="block md:hidden mt-3 pl-6">
+        <img src="https://skillicons.dev/icons?i=java" class="h-8 inline mr-2" alt="Java" />
+        <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
+      </div>
+      <!-- bg gradient -->
+      <div class="absolute top-1/2 left-1/2 
                                  -translate-x-1/2 -translate-y-1/2 
                                  translate-x-[calc(-50%+200px)] translate-y-[calc(-50%-10px)] 
                                  z-10 w-[25rem] h-[20rem] rounded-full 
                                  bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
                                  blur-3xl opacity-100"></div>
 
-        </div>
+    </div>
 
-        <!-- end teks kiri gambar kanan -->
-
-
+    <!-- end teks kiri gambar kanan -->
 
 
-      </section>
-    </main>
+
+
+  </section>
+  </main>
 
   </div>
 
@@ -511,6 +606,8 @@
       }
     });
   </script>
+  <script src="https://unpkg.com/alpinejs@3.x.x/cdn/alpine.js" defer></script>
+
 </body>
 
 </html>
