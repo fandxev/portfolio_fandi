@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Portfolio</title>
 
+  <script src="https://unpkg.com/alpinejs@3.x.x/cdn/alpine.js" defer></script>
+
+
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +42,7 @@
       AOS.init();
     });
   </script>
+
 
   <style>
     #section_project {
@@ -113,6 +117,32 @@
     }
 
     /* end test line */
+
+    /* start styling modal */
+
+    .modal-enter {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    .modal-enter-active {
+      opacity: 1;
+      transform: scale(1);
+      transition: all 300ms ease-out;
+    }
+
+    .modal-leave {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .modal-leave-active {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 200ms ease-in;
+    }
+
+    /* end styling modal */
   </style>
 </head>
 
@@ -573,6 +603,67 @@
     </section>
   </footer>
 
+  <!-- start modal -->
+
+  <!-- Tombol Buka Modal -->
+  <button id="openModalBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded">
+    Buka Modal
+  </button>
+
+  <!-- Overlay & Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div id="modalBox" class="bg-white rounded-lg shadow-lg p-6 w-11/12 max-w-md relative">
+      <!-- Tombol Close -->
+      <button id="closeModalBtn" class="absolute top-2 right-2 text-gray-400 hover:text-black text-2xl">
+        &times;
+      </button>
+      <h2 class="text-xl font-semibold mb-4">Modal Animasi</h2>
+      <p class="text-gray-700">Sekarang modal muncul dan menghilang dengan animasi 🎉</p>
+    </div>
+  </div>
+
+  <!-- end modal -->
+
+  <!-- start script modal -->
+  <script>
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+    const modal = document.getElementById('modal');
+    const modalBox = document.getElementById('modalBox');
+
+    function showModal() {
+      modal.classList.remove('hidden');
+      modalBox.classList.add('modal-enter');
+      setTimeout(() => {
+        modalBox.classList.add('modal-enter-active');
+        modalBox.classList.remove('modal-enter');
+      }, 10);
+    }
+
+    function hideModal() {
+      modalBox.classList.add('modal-leave');
+      setTimeout(() => {
+        modalBox.classList.add('modal-leave-active');
+        modalBox.classList.remove('modal-leave');
+      }, 10);
+
+      // Setelah animasi selesai, sembunyikan modal
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modalBox.classList.remove('modal-leave-active');
+      }, 200);
+    }
+
+    openBtn.addEventListener('click', showModal);
+    closeBtn.addEventListener('click', hideModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) hideModal();
+    });
+  </script>
+
+  <!-- end script modal -->
+
   <script>
     const hamburger = document.getElementById('hamburger');
     const popupMenu = document.getElementById('popup-menu');
@@ -595,7 +686,9 @@
       }
     });
   </script>
-  <script src="https://unpkg.com/alpinejs@3.x.x/cdn/alpine.js" defer></script>
+
+
+
 
 </body>
 
