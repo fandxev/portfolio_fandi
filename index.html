@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Portfolio</title>
 
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -116,7 +116,7 @@
   </style>
 </head>
 
-<body class="bg-[#0d0628] text-white">
+<body class="bg-[#0d0628] text-white overflow-x-hidden">
 
 
   <header class="mx-auto px-8 bg-[rgba(13,6,42,1)]">
@@ -125,8 +125,8 @@
       <button class="hamburger text-2xl md:hidden" id="hamburger">&#9776;</button>
       <ul class="hidden md:flex gap-6 font-bold" id="nav-menu">
         <li><a href="#work_experience">Work Experience</a></li>
-        <li><a href="#">Skill</a></li>
-        <li><a href="#">Project</a></li>
+        <li><a href="#skills">Skill</a></li>
+        <li><a href="#section_project">Project</a></li>
       </ul>
     </nav>
 
@@ -135,9 +135,9 @@
       id="popup-menu">
       <button class="absolute top-4 right-4 text-2xl text-white" id="close-btn">&times;</button>
       <ul class="mt-16 space-y-6 font-bold text-left">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Lab</a></li>
+        <li><a href="#work_experience">Work Experience</a></li>
+        <li><a href="#skills">Skill</a></li>
+        <li><a href="#section_project">Project</a></li>
       </ul>
     </div>
   </header>
@@ -190,63 +190,52 @@
           in
           Mobile Programming (Native Android & Flutter), and also Web Development (Front End & Back End)</p>
 
-        <div class="flex justify-center gap-20 mt-16">
+        <div class="flex flex-col items-center gap-8 mt-16 sm:flex-row sm:justify-center sm:gap-40">
 
+          <!-- Baris 1: Download CV -->
           <a href="https://drive.usercontent.google.com/uc?id=1BRbLYGUF5SJIkCjnuimVJSYxy7oDbpqT&export=download"
             target="_blank"
             class="flex items-center justify-center px-6 py-3 font-semibold text-gray-200 bg-gray-800 rounded-md transition-all duration-500 ease-in-out transform hover:bg-violet-500 hover:scale-[1.2]">
-            <span class="">Download CV</span>
+            <span>Download CV</span>
           </a>
 
-          <a href="https://gitlab.com/fandx" target="_blank" rel="noopener noreferrer"
-            class="group relative p-2 w-24 h-24 block">
+          <!-- Baris 2: GitLab dan GitHub -->
+          <div class="flex gap-6 sm:gap-20">
+            <a href="https://gitlab.com/fandx" target="_blank" rel="noopener noreferrer"
+              class="group relative p-2 w-24 h-24 block">
+              <img src="img/gitlab_inactive.svg" alt="normal"
+                class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform group-hover:opacity-0 group-hover:scale-[1.2]">
+              <img src="img/gitlab_active.svg" alt="hover"
+                class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:scale-[1.2]">
+            </a>
 
-            <!-- icon normal -->
-            <img src="img/gitlab_inactive.svg" alt="normal"
-              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform group-hover:opacity-0 group-hover:scale-[1.2]">
+            <a href="https://github.com/fandxev" target="_blank" rel="noopener noreferrer"
+              class="group relative p-2 w-24 h-24 block">
+              <img src="img/github_inactive.svg" alt="normal"
+                class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform group-hover:opacity-0 group-hover:scale-[1.2]">
+              <img src="img/github_active.svg" alt="hover"
+                class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:scale-[1.2]">
+            </a>
+          </div>
 
-            <!-- icon saat hover -->
-            <img src="img/gitlab_active.svg" alt="hover"
-              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:scale-[1.2]">
-          </a>
+          <!-- Baris 3: Instagram dan LinkedIn -->
+          <div class="flex gap-6 sm:gap-20">
+            <a href="https://www.instagram.com/fandyjoansyah5758" target="_blank" rel="noopener noreferrer"
+              class="group relative p-2 w-24 h-24 block">
+              <img src="img/instagram_inactive.svg" alt="normal"
+                class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform group-hover:opacity-0 group-hover:scale-[1.2]">
+              <img src="img/instagram_active.svg" alt="hover"
+                class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:scale-[1.2]">
+            </a>
 
-          <a href="https://github.com/fandxev" target="_blank" rel="noopener noreferrer"
-            class="group relative p-2 w-24 h-24 block">
-
-            <!-- icon normal -->
-            <img src="img/github_inactive.svg" alt="normal"
-              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform group-hover:opacity-0 group-hover:scale-[1.2]">
-
-            <!-- icon saat hover -->
-            <img src="img/github_active.svg" alt="hover"
-              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:scale-[1.2]">
-          </a>
-
-
-          <a href="https://www.instagram.com/fandyjoansyah5758" target="_blank" rel="noopener noreferrer"
-            class="group relative p-2 w-24 h-24 block">
-
-            <!-- icon normal -->
-            <img src="img/instagram_inactive.svg" alt="normal"
-              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform group-hover:opacity-0 group-hover:scale-[1.2]">
-
-            <!-- icon saat hover -->
-            <img src="img/instagram_active.svg" alt="hover"
-              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:scale-[1.2]">
-          </a>
-
-
-          <a href="https://www.linkedin.com/in/fandy-ahmad-joansyah" target="_blank" rel="noopener noreferrer"
-            class="group relative p-2 w-24 h-24 block">
-
-            <!-- icon normal -->
-            <img src="img/linkedin_inactive.svg" alt="normal"
-              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform group-hover:opacity-0 group-hover:scale-[1.2]">
-
-            <!-- icon saat hover -->
-            <img src="img/linkedin_active.svg" alt="hover"
-              class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:scale-[1.2]">
-          </a>
+            <a href="https://www.linkedin.com/in/fandy-ahmad-joansyah" target="_blank" rel="noopener noreferrer"
+              class="group relative p-2 w-24 h-24 block">
+              <img src="img/linkedin_inactive.svg" alt="normal"
+                class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform group-hover:opacity-0 group-hover:scale-[1.2]">
+              <img src="img/linkedin_active.svg" alt="hover"
+                class="absolute top-0 left-0 transition-all duration-500 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:scale-[1.2]">
+            </a>
+          </div>
         </div>
 
   </div>
@@ -304,7 +293,7 @@
     </div>
   </section>
 
-  <section data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-offset="200"
+  <section id="skills" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-offset="200"
     class="text-center py-8 px-4 md:px-32 lg:px-20">
     <p class="text-lg font-bold">Skills</p>
 
@@ -452,9 +441,9 @@
 
       <!-- bg gradient -->
       <div class="absolute top-1/2 left-1/2 
-                       -translate-x-1/2 -translate-y-1/2 
-                       translate-x-[calc(-50%+200px)] translate-y-[calc(-50%-10px)] 
-                       z-10 w-[40rem] h-[35rem] rounded-full 
+                       sm:-translate-x-1/2 sm:-translate-y-1/2 
+                       sm:translate-x-[calc(-50%+200px)] sm:translate-y-[calc(-50%-10px)] 
+                       z-10 w-[7rem] h-[12rem] sm:w-[40rem] sm:h-[35rem] rounded-full 
                        bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
                        blur-3xl opacity-100"></div>
 
@@ -504,9 +493,9 @@
       </div>
       <!-- bg gradient -->
       <div class="absolute top-1/2 left-1/2 
-                               -translate-x-1/2 -translate-y-1/2 
-                               translate-x-[calc(-50%-200px)] translate-y-[calc(-50%-10px)] 
-                               z-10 w-[40rem] h-[35rem] rounded-full 
+                               sm:-translate-x-1/2 sm:-translate-y-1/2 
+                               sm:translate-x-[calc(-50%-200px)] sm:translate-y-[calc(-50%-10px)] 
+                               z-10 w-[7rem] h-[12rem] sm:w-[40rem] sm:h-[35rem] rounded-full 
                                bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
                                blur-3xl opacity-100"></div>
 
@@ -552,9 +541,9 @@
       </div>
       <!-- bg gradient -->
       <div class="absolute top-1/2 left-1/2 
-                                 -translate-x-1/2 -translate-y-1/2 
-                                 translate-x-[calc(-50%+200px)] translate-y-[calc(-50%-10px)] 
-                                 z-10 w-[25rem] h-[20rem] rounded-full 
+                                 sm:-translate-x-1/2 sm:-translate-y-1/2 
+                                 sm:translate-x-[calc(-50%+200px)] sm:translate-y-[calc(-50%-10px)] 
+                                 z-10 w-[7rem] h-[12rem] sm:w-[25rem] sm:h-[20rem] rounded-full 
                                  bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
                                  blur-3xl opacity-100"></div>
 
