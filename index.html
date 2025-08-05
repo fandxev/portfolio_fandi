@@ -53,6 +53,32 @@
       /* IE 10+ */
     }
 
+    /* start modal anim */
+    .modal-enter {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    .modal-enter-active {
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    }
+
+    .modal-leave {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .modal-leave-active {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+    }
+
+    /* end modal anim */
+
+
     #section_project::-webkit-scrollbar {
       display: none;
       /* Chrome, Safari */
@@ -117,32 +143,6 @@
     }
 
     /* end test line */
-
-    /* start styling modal */
-
-    .modal-enter {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-
-    .modal-enter-active {
-      opacity: 1;
-      transform: scale(1);
-      transition: all 300ms ease-out;
-    }
-
-    .modal-leave {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    .modal-leave-active {
-      opacity: 0;
-      transform: scale(0.95);
-      transition: all 200ms ease-in;
-    }
-
-    /* end styling modal */
   </style>
 </head>
 
@@ -220,7 +220,7 @@
           in
           Mobile Programming (Native Android & Flutter), and also Web Development (Front End & Back End)</p>
 
-        <div class="flex flex-col items-center gap-8 mt-16 sm:flex-row sm:justify-center sm:gap-40">
+        <div class="flex flex-col items-center gap-8 mt-16 sm:flex-row sm:justify-center sm:gap-20">
 
           <!-- Baris 1: Download CV -->
           <a href="https://drive.usercontent.google.com/uc?id=1BRbLYGUF5SJIkCjnuimVJSYxy7oDbpqT&export=download"
@@ -283,17 +283,19 @@
           <h1 class="font-bold">Mobile Apps Developer</h1>
           <p class="text-[9px] my-2">My main skill in Software Engineering using Kotlin/Java and Flutter</p>
           <button
-            class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
+            class="detail-btn font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200"
+            data-type="mobile">Details</button>
         </div>
       </div>
 
       <div class="flex p-6 sm:w-[400px] h-auto bg-cover" style="background-image: url('img/rect-2.png');">
         <img src="img/icon_web_development.png" alt="icon_web_dev" class="w-[80px] self-start" />
         <div class="ml-4 text-left">
-          <h1 class="font-bold">Web Developer</h1>
-          <p class="text-[9px] my-2">Make website using HTML, CSS, Javascript, Jquery, PHP, and Vue</p>
+          <h1 class="font-bold">Backend Developer</h1>
+          <p class="text-[9px] my-2">Provide backend services and logic using Laravel, Node JS, etc</p>
           <button
-            class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
+            class="detail-btn font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200"
+            data-type="backend">Details</button>
         </div>
       </div>
 
@@ -305,8 +307,8 @@
         <div class="ml-4 text-left">
           <h1 class="font-bold">SQL Database</h1>
           <p class="text-[9px] my-2">Designing Effective RDBMS Schema using MySQL/PostgreSQL</p>
-          <button
-            class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
+          <button data-type="sql"
+            class="detail-btn font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
         </div>
       </div>
 
@@ -314,10 +316,10 @@
       <div class="flex p-6 sm:w-[400px] h-auto bg-cover" style="background-image: url('img/rect-4.png');">
         <img src="img/icon_fullstack_development.png" alt="icon_fullstack_dev" class="w-[80px] self-start" />
         <div class="ml-4 text-left">
-          <h1 class="font-bold">Fullstack Developer</h1>
-          <p class="text-[9px] my-2">Make website using HTML, CSS, Javascript, Jquery, PHP, and Vue</p>
-          <button
-            class="font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
+          <h1 class="font-bold">Front End Web Developer</h1>
+          <p class="text-[9px] my-2">Designing website using HTML, CSS, Javascript, Jquery, and Vue</p>
+          <button data-type="frontend"
+            class="detail-btn font-poppins text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
         </div>
       </div>
     </div>
@@ -612,13 +614,17 @@
 
   <!-- Overlay & Modal -->
   <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-    <div id="modalBox" class="bg-white rounded-lg shadow-lg p-6 w-11/12 max-w-md relative">
+    <div id="modalBox" class="bg-[rgba(46,20,105,1)] rounded-lg shadow-lg p-6 w-11/12 max-w-md relative">
       <!-- Tombol Close -->
+
+      <h2 id="modalTitle" class="text-xl font-semibold mb-4">Modal Animasi</h2>
       <button id="closeModalBtn" class="absolute top-2 right-2 text-gray-400 hover:text-black text-2xl">
         &times;
       </button>
-      <h2 class="text-xl font-semibold mb-4">Modal Animasi</h2>
-      <p class="text-gray-700">Sekarang modal muncul dan menghilang dengan animasi 🎉</p>
+      <div
+        class="modal_content bg-[rgba(15,4,43,1)] max-h-[30rem] overflow-y-auto text-white mt-8 mb-4 ml-1 mr-1 pt-8 pb-8 pl-4 pr-4">
+        <p id="modalContent" class="text-sm">Sekarang modal muncul dan menghilang dengan animasi 🎉</p>
+      </div>
     </div>
   </div>
 
@@ -626,43 +632,314 @@
 
   <!-- start script modal -->
   <script>
-    const openBtn = document.getElementById('openModalBtn');
-    const closeBtn = document.getElementById('closeModalBtn');
-    const modal = document.getElementById('modal');
-    const modalBox = document.getElementById('modalBox');
+    const modalPresets = {
+      mobile: {
+        title: 'Mobile Apps Developing',
+        content: `
+        <div style="text-align: center;">
+          <h1><b>Native Android</b></h1>
+        </div>
+        <br>
+        <br>
+        <h3><b>Technical Skill</b></h3>
+        <br>
+        <ul>
+          <li>• Java & Kotlin language</li>
+          <li>• Recycler View</li>
+          <li>• UI Slicing</li>
+          <li>• HTTP Request Using Retrofit&Volley</li>
+          <li>• SQLite</li>
+          <li>• Room</li>
+          <li>• Local Storage</li>
+          <li>• Room</li>
+          <li>• Dagger Hilt</li>
+          <li>• Coroutines & Coroutines Flow</li>
+          <li>• Firebase Integration (Auth, Firestore, Messaging)</li>
+          <li>• Jetpack Compose</li>
+        </ul>
 
-    function showModal() {
-      modal.classList.remove('hidden');
-      modalBox.classList.add('modal-enter');
+        <br>
+        <br>
+
+                <h3><b>Concept</b></h3>
+        <br>
+        <ul>
+          <li>• Dependency Injection</li>
+          <li>• MVVM Pattern</li>
+          <li>• Reactive Programming</li>
+          <li>• Unit Testing</li>
+        </ul>
+
+        <br>
+        <hr>
+        <br>
+        <br>
+
+
+        <div style="text-align: center;">
+          <h1><b>Flutter</b></h1>
+        </div>
+<br><br>
+
+<h3><b>Technical Skill</b></h3>
+<br>
+<ul>
+  <li>• Dart Programming Language</li>
+  <li>• Flutter Widgets (Stateless & Stateful)</li>
+  <li>• Custom Widgets</li>
+  <li>• Navigation (Navigator 1.0 & 2.0)</li>
+  <li>• State Management (BLoC/Cubit, GetX, Riverpod)</li>
+  <li>• HTTP Request (Dio, http package)</li>
+  <li>• JSON Parsing</li>
+  <li>• UI Slicing</li>
+  <li>• Local Storage (SharedPreferences, Hive, sqflite)</li>
+  <li>• Firebase Integration (Auth, Firestore, Messaging)</li>
+  <li>• Responsive UI & MediaQuery</li>
+  <li>• Animations (Implicit & Explicit)</li>
+</ul>
+
+<br><br>
+
+<h3><b>Concept</b></h3>
+<br>
+<ul>
+  <li>• Declarative UI Paradigm</li>
+  <li>• Clean Architecture</li>
+  <li>• Advanced State Management</li>
+  <li>• Unit & Widget Testing</li>
+</ul>
+        `
+      },
+      backend: {
+        title: 'Backend Programming',
+        content: `
+        <div style="text-align: center;">
+          <h1><b>PHP</b></h1>
+        </div>
+        <br>
+        <br>
+        <h3><b>Technical Skill</b></h3>
+        <br>
+        <ul>
+          <li>• Laravel</li>
+          <li>• Code Igniter</li>
+          <li>• Filament</li>
+          <li>• Livewire</li>
+          <li>• FCM Server Laravel</li>
+          <li>• Redis</li>
+          <li>• Sanctum</li>
+
+        </ul>
+
+        <br>
+        <br>
+
+                <h3><b>Concept</b></h3>
+        <br>
+        <ul>
+          <li>• MVC</li>
+          <li>• Authentication</li>
+          <li>• Unit Testing</li>
+          <li>• REST API</li>
+          <li>• Eager Loading</li>
+          <li>• Server Caching</li>
+        </ul>
+
+        <br>
+        <hr>
+        <br>
+        <br>
+
+
+        <div style="text-align: center;">
+          <h1><b>Node JS</b></h1>
+        </div>
+<br><br>
+
+<h3><b>Technical Skill</b></h3>
+<br>
+<ul>
+  <li>• Express JS</li>
+  <li>• Nest JS</li>
+  <li>• Sequelize ORM</li>
+  <li>• Auth</li>
+</ul>
+
+<br><br>
+
+<h3><b>Concept</b></h3>
+<br>
+<ul>
+    <li>• Authentication</li>
+    <li>• REST API</li>
+</ul>
+        `
+      },
+      sql: {
+        title: 'SQL Database',
+        content: `
+        <div style="text-align: center;">
+          <h1><b>MySQL & PostgreSQL</b></h1>
+        </div>
+        <br>
+        <br>
+        <h3><b>Technical Skill</b></h3>
+        <br>
+        <ul>
+          <li>• Main SQL Command</li>
+          <li>• Join & Relation</li>
+          <li>• Aggregate Function</li>
+          <li>• SubQuery</li>
+          <li>• Triggers</li>
+
+        </ul>
+
+        <br>
+        <br>
+
+                <h3><b>Concept</b></h3>
+        <br>
+        <ul>
+          <li>• Normalization</li>
+          <li>• Relation Join</li>
+          <li>• ERD</li>
+        </ul>
+        `
+      },
+      frontend: {
+        title: 'Frontend Programming',
+        content:
+          `
+           <div style="text-align: center;">
+          <h1><b>HTML & CSS</b></h1>
+        </div>
+        <br>
+        <br>
+        <h3><b>Technical Skill</b></h3>
+        <br>
+        <ul>
+          <li>• Bootstrap CSS</li>
+          <li>• Tailwind CSS</li>
+          <li>• Flexbox</li>
+          <li>• Grid</li>
+          <li>• Media Queries</li>
+          <li>• SCSS & SASS</li>
+          <li>• Transition & Animation</li>
+          <li>• UI Slicing</li>
+          <li>• Pseudo class & Pseudo Element</li>
+
+        </ul>
+
+        <br>
+        <br>
+
+                <h3><b>Concept</b></h3>
+        <br>
+        <ul>
+          <li>• Server Side Responsive Web Design</li>
+          <li>• Client Side Responsive Web Design</li>
+          <li>• Box Model</li>
+          <li>• Eager Loading</li>
+        </ul>
+
+        <br>
+        <hr>
+        <br>
+        <br>
+
+
+        <div style="text-align: center;">
+          <h1><b>Javascript</b></h1>
+        </div>
+<br><br>
+
+<h3><b>Technical Skill</b></h3>
+<br>
+<ul>
+  <li>• Vanilla JS</li>
+  <li>• Jquery</li>
+  <li>• Vue JS</li>
+  <li>• AJAX</li>
+  <li>• Async Await Promise</li>
+  <li>• Vanilla JS, Jquery, Vue JS DOM Manipulation</li>
+  <li>• Pinia State Management</li>
+  <li>• Axios</li>
+
+
+</ul>
+
+<br><br>
+
+<h3><b>Concept</b></h3>
+<br>
+<ul>
+    <li>• DOM Manipulation</li>
+    <li>• State Management</li>
+    <li>• Async HTTP Request&Response</li>
+    <li>• Reactivity</li>
+    <li>• Integration with Backend</li>
+
+</ul>
+        `
+      },
+    };
+
+    const modal = document.getElementById("modal");
+    const modalBox = document.getElementById("modalBox");
+    const closeBtn = document.getElementById("closeModalBtn");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalContent = document.getElementById("modalContent");
+
+    // Fungsi buka modal
+    function showModal(type) {
+      const preset = modalPresets[type];
+      if (!preset) return;
+
+      modalTitle.innerHTML = preset.title;
+      modalContent.innerHTML = preset.content;
+
+      modal.classList.remove("hidden");
+      modalBox.classList.remove("modal-leave", "modal-leave-active");
+      modalBox.classList.add("modal-enter");
+      requestAnimationFrame(() => {
+        modalBox.classList.add("modal-enter-active");
+      });
+
       setTimeout(() => {
-        modalBox.classList.add('modal-enter-active');
-        modalBox.classList.remove('modal-enter');
-      }, 10);
+        modalBox.classList.remove("modal-enter", "modal-enter-active");
+      }, 300);
     }
 
+    // Fungsi tutup modal
     function hideModal() {
-      modalBox.classList.add('modal-leave');
-      setTimeout(() => {
-        modalBox.classList.add('modal-leave-active');
-        modalBox.classList.remove('modal-leave');
-      }, 10);
+      modalBox.classList.add("modal-leave");
+      requestAnimationFrame(() => {
+        modalBox.classList.add("modal-leave-active");
+      });
 
-      // Setelah animasi selesai, sembunyikan modal
       setTimeout(() => {
-        modal.classList.add('hidden');
-        modalBox.classList.remove('modal-leave-active');
+        modal.classList.add("hidden");
+        modalBox.classList.remove("modal-leave", "modal-leave-active");
       }, 200);
     }
 
-    openBtn.addEventListener('click', showModal);
-    closeBtn.addEventListener('click', hideModal);
+    // Event listener
+    document.querySelectorAll(".detail-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const type = btn.getAttribute("data-type");
+        showModal(type);
+      });
+    });
 
-    modal.addEventListener('click', (e) => {
+    closeBtn.addEventListener("click", hideModal);
+    modal.addEventListener("click", (e) => {
       if (e.target === modal) hideModal();
     });
   </script>
 
   <!-- end script modal -->
+
+
 
   <script>
     const hamburger = document.getElementById('hamburger');
