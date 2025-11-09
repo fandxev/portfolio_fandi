@@ -67,6 +67,15 @@
     }
 
 
+
+    /* Hover efek untuk lebih menonjol */
+
+
+    .line_modal {
+      margin-top: 12px;
+    }
+
+
     #section_project {
       overflow-x: visible;
       scrollbar-width: none;
@@ -172,7 +181,7 @@
 
     /* Title Style */
     #modalTitle {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Speedy', sans-serif;
       color: #fff;
       text-shadow: 0 0 10px #b47cff, 0 0 20px #7e52ff;
       letter-spacing: 1px;
@@ -234,8 +243,39 @@
 
 
 
+    .emblem {
+      font-family: 'Speedy', sans-serif !important;
+      display: inline-block;
+      /* biar efek 3D lebih jelas */
+      padding: 0.8rem 1.2rem;
+      /* atau font custom */
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+
+      /* Background card */
+      background: linear-gradient(145deg, #4b1f91, #190a40);
+
+      /* Rounded corners */
+
+
+      /* Efek 3D timbul */
+      box-shadow:
+        4px 4px 15px rgba(0, 0, 0, 0.5),
+        -2px -2px 10px rgba(255, 255, 255, 0.2);
+
+
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+
+
     .font-speedy {
       font-family: 'Speedy', sans-serif;
+    }
+
+    .font-supreme {
+      font-family: 'SupremeSpike', sans-serif;
     }
 
     .skillname {
@@ -296,8 +336,8 @@
       <div class="text-2xl w-[24px] h-[24px]"><img class="" src="img/jt_logo.png" /></div>
       <button class="hamburger text-2xl md:hidden" id="hamburger">&#9776;</button>
       <ul class="hidden md:flex gap-6 font-bold" id="nav-menu">
-        <li><a href="#work_experience">Work Experience</a></li>
-        <li><a href="#skills">Skill</a></li>
+        <li><a class="" href="#knowledges_&_skills">Knowledges & Skills</a></li>
+        <li><a href="#tools_&_techs">Tools & Techs</a></li>
         <li><a href="#section_project">Project</a></li>
       </ul>
     </nav>
@@ -307,8 +347,8 @@
       id="popup-menu">
       <button class="absolute top-4 right-4 text-2xl text-white" id="close-btn">&times;</button>
       <ul class="mt-16 space-y-6 font-bold text-left">
-        <li><a href="#work_experience">Work Experience</a></li>
-        <li><a href="#skills">Skill</a></li>
+        <li><a href="#knowledges_&_skills">Knowledges & Skills</a></li>
+        <li><a href="#tools_&_techs">Tools & Techs</a></li>
         <li><a href="#section_project">Project</a></li>
       </ul>
     </div>
@@ -333,7 +373,7 @@
 
             <div class="flex justify-start items-start">
               <p class="text-base md:text-lg self-start">
-                Hello!! I Am <span class="text-purple-500 font-semibold">Fandi Ahmad</span> </p>
+                Hello!! I Am <span class="text-purple-500 font-semibold">Fandi Ahmad Joansyah</span> </p>
             </div>
             <p class="mt-3 text-xs md:text-sm">A Programmer who</p>
             <h1 class="mt-2 text-base md:text-lg font-bold leading-tight text-left">
@@ -413,17 +453,36 @@
   </div>
   </section>
 
-  <section id="work_experience" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000" data-aos-offset="300"
-    class="text-center px-4 md:px-32 py-10">
-    <h2 class="text-2xl font-bold mb-4">Work Experience</h2>
+  <section id="knowledges_&_skills" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000"
+    data-aos-offset="300" class="text-center px-4 md:px-32 py-10">
+    <h2 class="text-2xl font-speedy mb-4">Knowledges & Skills</h2>
+
+
+
+
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-0.5 bg-center bg-no-repeat"
       style="background-image: url('img/background-gradient.png'); background-size: 200px; background-position: center 20px;">
+
+      <div class="flex p-6 sm:w-[400px] h-auto bg-cover sm:col-span-2 justify-self-center"
+        style="background-image: url('img/rect-1.png');">
+        <img src="img/icon_fundamental_programming.png" alt="icon_mobile_dev" class="w-[80px] self-start" />
+        <div class="ml-4 text-left">
+          <h1 class="text-[16px] font-bold">Fundamental Programming</h1>
+          <p class="text-[12px] my-2">Strong foundation in programming logic, algorithms, data structures, etc</p>
+          <button
+            class="detail-btn font-speedy text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200"
+            data-type="fundamental">Details</button>
+        </div>
+      </div>
+
+
       <div class="flex p-6 sm:w-[400px] h-auto bg-cover sm:place-self-end"
         style="background-image: url('img/rect-1.png');">
         <img src="img/icon_mobile_development.png" alt="icon_mobile_dev" class="w-[80px] self-start" />
         <div class="ml-4 text-left">
-          <h1 class="font-bold">Mobile Apps Developer</h1>
-          <p class="text-[9px] my-2">My main skill in Software Engineering using Kotlin/Java and Flutter</p>
+          <h1 class="text-[16px] font-bold">Mobile Apps Development</h1>
+          <p class="text-[12px] my-2">Having good knowledge and project experience using
+            Flutter(Hybrid) & Kotlin (Native Android)</p>
           <button
             class="detail-btn font-speedy text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200"
             data-type="mobile">Details</button>
@@ -433,8 +492,8 @@
       <div class="flex p-6 sm:w-[400px] h-auto bg-cover" style="background-image: url('img/rect-2.png');">
         <img src="img/icon_web_development.png" alt="icon_web_dev" class="w-[80px] self-start" />
         <div class="ml-4 text-left">
-          <h1 class="font-bold">Backend Developer</h1>
-          <p class="text-[9px] my-2">Provide backend services and logic using Laravel, Node JS, etc</p>
+          <h1 class="text-[16px] font-bold">Backend Developer</h1>
+          <p class="text-[12px] my-2">Provide backend services and logic using Laravel, Node JS, etc</p>
           <button
             class="detail-btn font-speedy text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200"
             data-type="backend">Details</button>
@@ -447,8 +506,8 @@
         style="background-image: url('img/rect-3.png');">
         <img src="img/icon_database_administrator.png" alt="icon_db_admin" class="w-[80px] self-start" />
         <div class="ml-4 text-left">
-          <h1 class="font-bold">SQL Database</h1>
-          <p class="text-[9px] my-2">Designing Effective RDBMS Schema using MySQL/PostgreSQL</p>
+          <h1 class="text-[16px] font-bold">SQL Database</h1>
+          <p class="text-[12px] my-2">Designing Effective RDBMS Schema using MySQL/PostgreSQL</p>
           <button data-type="sql"
             class="detail-btn font-speedy text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
         </div>
@@ -458,8 +517,8 @@
       <div class="flex p-6 sm:w-[400px] h-auto bg-cover" style="background-image: url('img/rect-4.png');">
         <img src="img/icon_fullstack_development.png" alt="icon_fullstack_dev" class="w-[80px] self-start" />
         <div class="ml-4 text-left">
-          <h1 class="font-bold">Front End Web Developer</h1>
-          <p class="text-[9px] my-2">Designing website using HTML, CSS, Javascript, Jquery, and Vue</p>
+          <h1 class="text-[16px] font-bold">Front End Web Developer</h1>
+          <p class="text-[12px] my-2">Designing website using HTML, CSS, Javascript, Jquery, and Vue</p>
           <button data-type="frontend"
             class="detail-btn font-speedy text-[9px] bg-[#2C1250] hover:bg-blue-400 text-white font-semibold py-1 px-3 rounded-full outline outline-2 outline-[#693B93] transition-colors duration-200">Details</button>
         </div>
@@ -467,9 +526,9 @@
     </div>
   </section>
 
-  <section id="skills" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-offset="200"
+  <section id="tools_&_techs" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-offset="200"
     class="text-center py-8 px-4 md:px-32 lg:px-20">
-    <p class="text-lg font-bold">Skills</p>
+    <p class="text-2xl font-speedy font-bold">Tools & Techs</p>
 
     <!-- Skill Categories -->
     <div class="mt-8 flex flex-col md:flex-row gap-6 justify-center items-stretch">
@@ -581,9 +640,9 @@
 
 
     <div data-aos="fade-left" data-aos-duration="1500" data-aos-once="true"
-      class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
+      class=" grid grid-cols-1 md:grid-cols-2 gap-2 relative">
       <div class="md:order-2 flex flex-col">
-        <h4 class="font-bold mb-1 featured-project font-speedy text-[12px]">Mobile Apps Project</h4>
+        <h4 class="font-bold mb-1 featured-project font-speedy text-[12px]">Mobile App Project</h4>
         <h1 class="font-bold mb-4  font-speedy text-[24px]">Unit Layanan Disabilitas Apps</h1>
 
         <span style="background-size: 100% 100%;"
@@ -592,13 +651,14 @@
           government owned
           information service app pro vides essential resources for students with disabilities including scholarship
           opportunities, Sekolah Luar Biasa (SLB), and other important information supporting children with
-          disabilities.
+          disabilities. Using GetX State Management and Firebase Remote config for efficient state handling and dynamic
+          UI updates without releasing new builds
         </span>
         <div class="z-50 hidden md:block mt-3 pl-6">
           <img src="https://skillicons.dev/icons?i=flutter" class="h-8 inline mr-2" alt="Flutter" />
           <button
             class=" detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
-            data-type="mobile">Details</button>
+            data-type="project_uld">Details</button>
         </div>
       </div>
 
@@ -615,7 +675,7 @@
         <img src="https://skillicons.dev/icons?i=flutter" class="h-8 inline mr-2" alt="Flutter" />
         <button
           class=" detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
-          data-type="mobile">Details</button>
+          data-type="project_uld">Details</button>
       </div>
       <!-- bg gradient -->
       <div class="pointer-events-none absolute top-1/2 left-1/2 
@@ -638,7 +698,7 @@
 
 
     <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-offset="200"
-      class="grid grid-cols-1 md:grid-cols-2 gap-2 relative">
+      class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
       <div class="flex flex-col">
         <h4 class="font-bold mb-1 featured-project font-speedy text-[12px]">Mobile App Project</h4>
         <h1 class="font-bold mb-4  font-speedy text-[24px]">Zona Mahasiswa Apps</h1>
@@ -656,7 +716,7 @@
           <img src="https://skillicons.dev/icons?i=laravel" class="h-8 inline mr-2" alt="Laravel" />
           <button
             class="detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
-            data-type="mobile">Details</button>
+            data-type="project_zona_app">Details</button>
 
         </div>
 
@@ -676,7 +736,7 @@
         <img src="https://skillicons.dev/icons?i=laravel" class="h-8 inline mr-2" alt="Laravel" />
         <button
           class="detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
-          data-type="mobile">Details</button>
+          data-type="project_zona_app">Details</button>
       </div>
 
       <!-- bg gradient -->
@@ -699,7 +759,7 @@
     <div data-aos="fade-left" data-aos-duration="1500" data-aos-once="true"
       class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
       <div class="md:order-2 flex flex-col">
-        <h4 class="font-bold mb-1 featured-project font-speedy text-[12px]">Website Project</h4>
+        <h4 class="font-bold mb-1 featured-project font-speedy text-[12px]">Fullstack Website Project</h4>
         <h1 class="font-bold mb-4  font-speedy text-[24px]">Zona Mahasiswa Web</h1>
         <span style="background-size: 100% 100%;"
           class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[660px] md:left-[-68px]">
@@ -711,11 +771,13 @@
         </span>
         <div class="hidden md:block mt-3 pl-6">
           <img src="https://skillicons.dev/icons?i=php" class="h-8 inline mr-2" alt="PHP" />
-          <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="Bootstrap" />
           <img src="https://skillicons.dev/icons?i=javascript" class="h-8 inline mr-2" alt="Javascript" />
+          <img src="https://skillicons.dev/icons?i=jquery" class="h-8 inline mr-2" alt="jQuery" />
+          <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="Bootstrap" />
+
           <button
             class="detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
-            data-type="mobile">Details</button>
+            data-type="project_zona_web">Details</button>
         </div>
       </div>
 
@@ -731,11 +793,13 @@
 
       <div class="block md:hidden mt-3 pl-6">
         <img src="https://skillicons.dev/icons?i=php" class="h-8 inline mr-2" alt="PHP" />
-        <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="Bootstrap" />
         <img src="https://skillicons.dev/icons?i=javascript" class="h-8 inline mr-2" alt="Javascript" />
+        <img src="https://skillicons.dev/icons?i=jquery" class="h-8 inline mr-2" alt="jQuery" />
+        <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="Bootstrap" />
+
         <button
           class="detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
-          data-type="mobile">Details</button>
+          data-type="project_zona_web">Details</button>
       </div>
       <!-- bg gradient -->
       <div class="absolute top-1/2 left-1/2 
@@ -764,14 +828,15 @@
           Successfully created and launched "Benerin", a home repair and construction service app. Collaborated with
           development
           teams to plan and build the app, focusing on mobile development and seamless integration with backend
-          RESTful APIs.
+          RESTful API
         </span>
         <div class="hidden md:block mt-3 pl-6">
-          <img src="https://skillicons.dev/icons?i=java" class="h-8 inline mr-2" alt="Java" />
           <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
+          <img src="https://skillicons.dev/icons?i=java" class="h-8 inline mr-2" alt="Java" />
+
           <button
             class="detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
-            data-type="mobile">Details</button>
+            data-type="project_benerin">Details</button>
         </div>
       </div>
 
@@ -785,11 +850,12 @@
       </div>
 
       <div class="block md:hidden mt-3 pl-6">
-        <img src="https://skillicons.dev/icons?i=java" class="h-8 inline mr-2" alt="Java" />
         <img src="https://skillicons.dev/icons?i=kotlin" class="h-8 inline mr-2" alt="Kotlin" />
+        <img src="https://skillicons.dev/icons?i=java" class="h-8 inline mr-2" alt="Java" />
+
         <button
           class="detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
-          data-type="mobile">Details</button>
+          data-type="project_benerin">Details</button>
       </div>
       <!-- bg gradient -->
       <div class="absolute top-1/2 left-1/2 
@@ -805,6 +871,183 @@
 
 
 
+    <!-- start teks kanan gambar kiri -->
+
+
+    <div data-aos="fade-left" data-aos-duration="1500" data-aos-once="true"
+      class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
+      <div class="md:order-2 flex flex-col">
+        <h4 class="font-bold mb-1 featured-project font-speedy text-[12px]">Back End Project</h4>
+        <h1 class="font-bold mb-4  font-speedy text-[24px]">Back End Astro</h1>
+        <span style="background-size: 100% 100%;"
+          class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[660px] md:left-[-68px]">
+          Involved in the development of an ERP application for an Astro Distributor, which functions as a control
+          system and
+          management for sales visits to client stores. In this project, I played a role in backend development for the
+          sales
+          visit module, covering visit data management, sales activity logging, and integration with the overall
+          distributor
+          management system
+        </span>
+        <div class="hidden md:block mt-3 pl-6">
+          <img src="https://skillicons.dev/icons?i=nestjs" class="h-8 inline mr-2" alt="nestjs" />
+          <img src="https://skillicons.dev/icons?i=nodejs" class="h-8 inline mr-2" alt="nodejs" />
+          <button
+            class="detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
+            data-type="project_astro">Details</button>
+        </div>
+      </div>
+
+      <div
+        class="md:order-1 w-full h-[180px] md:h-[280px] bg-[rgba(9,2,16,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
+        <!-- Inner content (image container) -->
+        <div
+          class="absolute  z-20 top-0 left-0 mt-[18px] ml-[36px] bg-[rgba(55,30,80,1)] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
+          <img src="img/astro_project.png" alt="Content"
+            class="w-full z-20 h-full object-cover rounded-tl-xl relative" />
+        </div>
+      </div>
+
+      <div class="block md:hidden mt-3 pl-6">
+        <img src="https://skillicons.dev/icons?i=nestjs" class="h-8 inline mr-2" alt="nestjs" />
+        <img src="https://skillicons.dev/icons?i=nodejs" class="h-8 inline mr-2" alt="nodejs" />
+
+
+        <button
+          class="detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
+          data-type="project_astro">Details</button>
+      </div>
+      <!-- bg gradient -->
+      <div class="absolute top-1/2 left-1/2 
+                                   sm:-translate-x-1/2 sm:-translate-y-1/2 
+                                   sm:translate-x-[calc(-50%-200px)] sm:translate-y-[calc(-50%-10px)] 
+                                   z-10 w-[7rem] h-[12rem] sm:w-[40rem] sm:h-[35rem] rounded-full 
+                                   bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
+                                   blur-3xl opacity-100"></div>
+
+    </div>
+
+    <!-- end teks kanan gambar kiri -->
+
+
+    <!-- start teks kiri gambar kanan -->
+
+
+    <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-offset="200"
+      class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
+      <div class="flex flex-col">
+        <h4 class="font-bold mb-1 featured-project font-speedy text-[12px]">Fullstack Web Project</h4>
+        <h1 class="font-bold mb-4  font-speedy text-[24px]">Adi Persada Beton Web</h1>
+        <span style="background-size: 100% 100%;"
+          class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[550px]">
+          The Data Management Information System for PT Adi Persada Beton (Sadang Factory) was created to facilitate
+          business
+          processes and data monitoring. This application includes project, customer, and vendor management, as well as
+          operational data logging. I served as a backend developer and also contributed to the frontend
+        </span>
+        <div class="hidden md:block mt-3 pl-6">
+          <img src="https://skillicons.dev/icons?i=laravel" class="h-8 inline mr-2" alt="laravel" />
+          <img src="https://skillicons.dev/icons?i=jquery" class="h-8 inline mr-2" alt="jquery" />
+          <img src="https://skillicons.dev/icons?i=javascript" class="h-8 inline mr-2" alt="javascript" />
+          <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="bootstrap" />
+          <button
+            class="detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
+            data-type="project_adi">Details</button>
+        </div>
+      </div>
+
+      <div class="w-full h-[180px] md:h-[280px] bg-[rgba(9,2,16,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
+        <!-- Inner content (image container) -->
+        <div
+          class="absolute bg-[rgba(55,30,80,1)] z-20 top-0 left-0 mt-[18px] ml-[36px] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
+          <img src="img/adi_project.png" alt="Content" class="w-full z-20 h-full object-cover rounded-tl-xl relative" />
+        </div>
+      </div>
+
+      <div class="block md:hidden mt-3 pl-6">
+        <img src="https://skillicons.dev/icons?i=laravel" class="h-8 inline mr-2" alt="laravel" />
+        <img src="https://skillicons.dev/icons?i=jquery" class="h-8 inline mr-2" alt="jquery" />
+        <img src="https://skillicons.dev/icons?i=javascript" class="h-8 inline mr-2" alt="javascript" />
+        <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="bootstrap" />
+        <button
+          class="detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
+          data-type="project_adi">Details</button>
+      </div>
+      <!-- bg gradient -->
+      <div class="absolute top-1/2 left-1/2 
+                                       sm:-translate-x-1/2 sm:-translate-y-1/2 
+                                       sm:translate-x-[calc(-50%+200px)] sm:translate-y-[calc(-50%-10px)] 
+                                       z-10 w-[7rem] h-[12rem] sm:w-[25rem] sm:h-[20rem] rounded-full 
+                                       bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
+                                       blur-3xl opacity-100"></div>
+
+    </div>
+
+    <!-- end teks kiri gambar kanan -->
+
+
+    <!-- start teks kanan gambar kiri -->
+
+
+    <div data-aos="fade-left" data-aos-duration="1500" data-aos-once="true"
+      class="mt-[100px] grid grid-cols-1 md:grid-cols-2 gap-2 relative">
+      <div class="md:order-2 flex flex-col">
+        <h4 class="font-bold mb-1 featured-project font-speedy text-[12px]">Fullstack Web Project</h4>
+        <h1 class="font-bold mb-4  font-speedy text-[24px]">Gita Online Training Web</h1>
+        <span style="background-size: 100% 100%;"
+          class="bg-[rgba(20,13,19,0.4)] md:bg-[rgba(20,13,19,0.8)] rounded-lg p-4 relative z-30 text-[10px] md:text-[14px] md:w-[660px] md:left-[-68px]">
+          This Online Training Website was created for the selection test of potential marketing partners for PT Gita
+          Pratama
+          Nusantara in selling the Gita Smart School application. It serves as a medium for introducing tasks, learning
+          through
+          videos, and comprehension tests. I played a full role in its development and design
+        </span>
+        <div class="hidden md:block mt-3 pl-6">
+          <img src="https://skillicons.dev/icons?i=php" class="h-8 inline mr-2" alt="php" />
+          <img src="https://skillicons.dev/icons?i=jquery" class="h-8 inline mr-2" alt="jquery" />
+          <img src="https://skillicons.dev/icons?i=javascript" class="h-8 inline mr-2" alt="javascript" />
+          <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="bootstrap" />
+          <button
+            class="detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
+            data-type="project_gita">Details</button>
+        </div>
+      </div>
+
+      <div
+        class="md:order-1 w-full h-[180px] md:h-[280px] bg-[rgba(9,2,16,1)] p-1.5 rounded-lg relative overflow-hidden z-20">
+        <!-- Inner content (image container) -->
+        <div
+          class="absolute  z-20 top-0 left-0 mt-[18px] ml-[36px] bg-[rgba(55,30,80,1)] w-[calc(100%-12px)] h-[calc(100%-6px)] rounded-tr-[16px] overflow-hidden">
+          <img src="img/gita_project.png" alt="Content"
+            class="w-full z-20 h-full object-cover rounded-tl-xl relative" />
+        </div>
+      </div>
+
+      <div class="block md:hidden mt-3 pl-6">
+        <img src="https://skillicons.dev/icons?i=php" class="h-8 inline mr-2" alt="php" />
+        <img src="https://skillicons.dev/icons?i=jquery" class="h-8 inline mr-2" alt="jquery" />
+        <img src="https://skillicons.dev/icons?i=javascript" class="h-8 inline mr-2" alt="javascript" />
+        <img src="https://skillicons.dev/icons?i=bootstrap" class="h-8 inline mr-2" alt="bootstrap" />
+
+        <button
+          class="detail-btn font-speedy text-[14px] bg-[rgb(192,172,48)] hover:bg-gray-400 text-white font-semibold py-1 px-3 rounded-md  transition-colors duration-200"
+          data-type="project_gita">Details</button>
+      </div>
+      <!-- bg gradient -->
+      <div class="absolute top-1/2 left-1/2 
+                                         sm:-translate-x-1/2 sm:-translate-y-1/2 
+                                         sm:translate-x-[calc(-50%-200px)] sm:translate-y-[calc(-50%-10px)] 
+                                         z-10 w-[7rem] h-[12rem] sm:w-[40rem] sm:h-[35rem] rounded-full 
+                                         bg-[radial-gradient(circle,_rgba(168,85,247,0.9)_0%,_transparent_100%)] 
+                                         blur-3xl opacity-100"></div>
+
+    </div>
+
+    <!-- end teks kanan gambar kiri -->
+
+
+
+
 
   </section>
   </main>
@@ -815,13 +1058,13 @@
   <footer class="bg-[rgba(13,6,35,0.7)] mt-20">
     <section class="pt-8 pb-12  px-4 md:px-40">
       <p class="py-4 font-bold">Contact</p>
-      <p class="text-[12px] py-4">If you are interested in collaborating with me, hiring me, or simply having
+      <p class="text-[14px] py-4">If you are interested in collaborating with me, hiring me, or simply having
         discussion,
         feel free to reach
         out to me through:</p>
-      <p class="text-[12px] py-1">Email: fandyjoansyah@gmail.com</p>
-      <p class="text-[12px] py-1">Phone Number: +6289637499734</p>
-      <p class="text-[12px] py-1">LinkedIn: https://www.linkedin.com/in/fandy-ahmad-joansyah/</p>
+      <p class="text-[14px] py-1">Email: fandyjoansyah@gmail.com</p>
+      <p class="text-[14px] py-1">Phone Number: +6289637499734</p>
+      <p class="text-[14px] py-1">LinkedIn: https://www.linkedin.com/in/fandy-ahmad-joansyah/</p>
     </section>
   </footer>
 
@@ -835,7 +1078,7 @@
       <button id="closeModalBtn" class="absolute top-2 right-3 text-2xl">&times;</button>
       <h2 id="modalTitle" class="text-xl font-semibold mb-4">Modal Animasi</h2>
       <div class="modal_content max-h-[30rem] overflow-y-auto mt-8 mb-4 ml-1 mr-1 pt-8 pb-8 pl-4 pr-4">
-        <p id="modalContent" class="text-sm">Sekarang modal muncul dan menghilang dengan animasi 🎉</p>
+        <p id="modalContent" class="text-sm">Sekarang modal muncul dan menghilang dengan animasi </p>
       </div>
     </div>
   </div>
@@ -845,11 +1088,38 @@
   <!-- start script modal -->
   <script>
     const modalPresets = {
+      fundamental: {
+        title: 'Fundamental Programming',
+        content: `
+        <div style="text-align: center;">
+                    <h1 style="font-size: 1.1rem; font-family: 'Speedy', sans-serif;">Core Concept of all around Programming</h1>
+        </div>
+        <br>
+        <ul>
+          <li>• Git</li>
+          <li>• Data Structures</li>
+          <li>• Function / Procedure / Method</li>
+          <li>• Object Oriented Programming (OOP)</li>
+          <li>• Error Handling & Exception Handling</li>
+          <li>• Algoritm, Pseudo code, and UML</li>
+          <li>• MultiThreading Concepts</li>
+          <li>• Asynchronous Process Concepts</li>
+          <li>• Search Logic</li>
+          <li>• Sort Logic</li>
+          <li>• Unit Testing</li>
+
+        </ul>
+
+       
+        `
+      },
+
+
       mobile: {
         title: 'Mobile Apps Developing',
         content: `
         <div style="text-align: center;">
-          <h1><b>Native Android</b></h1>
+          <h1 style="font-size: 1.1rem; font-family: 'Speedy', sans-serif;">Native Android</h1>
         </div>
         <br>
         <br>
@@ -889,7 +1159,7 @@
 
 
         <div style="text-align: center;">
-          <h1><b>Flutter</b></h1>
+                    <h1 style="font-size: 1.1rem; font-family: 'Speedy', sans-serif;">Flutter</h1>
         </div>
 <br><br>
 
@@ -926,7 +1196,7 @@
         title: 'Backend Programming',
         content: `
         <div style="text-align: center;">
-          <h1><b>PHP</b></h1>
+                    <h1 style="font-size: 1.1rem; font-family: 'Speedy', sans-serif;">PHP</h1>
         </div>
         <br>
         <br>
@@ -964,7 +1234,7 @@
 
 
         <div style="text-align: center;">
-          <h1><b>Node JS</b></h1>
+                    <h1 style="font-size: 1.1rem; font-family: 'Speedy', sans-serif;">Node JS</h1>
         </div>
 <br><br>
 
@@ -991,7 +1261,7 @@
         title: 'SQL Database',
         content: `
         <div style="text-align: center;">
-          <h1><b>MySQL & PostgreSQL</b></h1>
+                    <h1 style="font-size: 1.1rem; font-family: 'Speedy', sans-serif;">MySQL & PostgreSQL</h1>
         </div>
         <br>
         <br>
@@ -1023,7 +1293,7 @@
         content:
           `
            <div style="text-align: center;">
-          <h1><b>HTML & CSS</b></h1>
+                    <h1 style="font-size: 1.1rem; font-family: 'Speedy', sans-serif;">HTML & CSS</h1>
         </div>
         <br>
         <br>
@@ -1061,7 +1331,7 @@
 
 
         <div style="text-align: center;">
-          <h1><b>Javascript</b></h1>
+                    <h1 style="font-size: 1.1rem; font-family: 'Speedy', sans-serif;">Javascript</h1>
         </div>
 <br><br>
 
@@ -1093,6 +1363,348 @@
 
 </ul>
         `
+      },
+
+      project_uld: {
+        title: 'Mobile Apps Unit Layanan Disabilitas',
+        content: `
+        <h3  class="emblem">Description</h3>
+        <hr class="line_modal">
+        <br>
+        <p>
+successfully developed the Unit Layanan Disabilitas mobile application for both Android and iOS. This government owned information service app pro vides essential resources for students with disabilities including scholarship opportunities, Sekolah Luar Biasa (SLB), and other important information supporting children with disabilities. Using GetX State Management and Firebase Remote config for efficient state handling and dynamic UI updates without releasing new builds
+        </p>
+
+        <br>
+        <br>
+
+        <h3 class="emblem">Team Overview</h3>
+        <hr class="line_modal">
+        <br>
+        <ul>
+        <li>• Total Technical Team: 3</li>
+          <li>• My Role: As Flutter Mobile Apps Developer</li>
+          </ul>
+
+          <br>
+          <br>
+
+               <h3 class="emblem">My Contribution</h3>
+        <hr class="line_modal">
+        <br>
+        <ul>
+        <li>• Fully created ULD Mobile App from Scratch using GetX State Management and MVVM Architecture</li>
+          <li>• Implement UI/UX Design on Mobile App</li>
+                    <li>• Minor adjustment on Back End Server Rest API</li>
+                    <li>• Implementing Firebase Remote Config to dynamically update app features without releasing a new version in Marketplace</li>
+
+          </ul>
+          <br>
+          <br>
+
+                         <h3 class="emblem">Tools & Tech</h3>
+        <hr class="line_modal">
+        <br>
+        <ul>
+        <li>            <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=flutter" class="h-8" alt="Flutter" /> Flutter</li>
+
+          </ul>
+        `
+      },
+
+
+      project_zona_app: {
+        title: 'Mobile Apps Zona Mahasiswa',
+        content: `
+        <h3  class="emblem">Description</h3>
+        <hr class="line_modal">
+        <br>
+        <p>
+Successfully launched "Zona Mahasiswa: Temukan forHat" on Play Store and App Store—an app combining news and social media. Used Flutter with BloC/Cubit for scalable architecture. Collaborated with business teams and integrated backend features like push notifications
+          </p>
+
+        <br>
+        <br>
+
+        <h3 class="emblem">Team Overview</h3>
+        <hr class="line_modal">
+        <br>
+        <ul>
+        <li>• Total Technical Team: 5</li>
+          </ul>
+          <p>• My Role:</p>
+          <ul style="margin-left:8px;">
+            <li>- Native Android Developer (later switch to Flutter Developer)</li>
+            <li>- Back End PHP Developer</li>
+            <li>- Tech Lead</li>
+          </ul>
+          <br>
+          <br>
+
+               <h3 class="emblem">My Contribution</h3>
+        <hr class="line_modal">
+        <br>
+        <ul>
+        <li>• Create Zona Mahasiswa Android App using Native Kotlin</li>
+        <li>• Switch Mobile Apps Developing from Kotlin to Flutter for better reach both Android and IOS with single Codebase</li>  
+        <li>• Implement BloC & Cubit State Management with Clean Architecture </li>
+        <li>• Design & Implement UI/UX Design on Mobile App</li>
+                    <li>• Provide Back End REST API using Laravel. Implementing auth, eager loading, etc</li>
+                    <li>• Create and maintain SQL Database</li>
+                    <li>• Setup Back End Firebase Cloud Messaging, and implement it on Mobile Apps</li>
+                    <li>• Manage project timelines and deliverables, ensuring milestones are met</li>
+                    <li>• Manage project timelines and deliverables, ensuring milestones are met</li>
+<li>• Communicate technical updates and strategies to stakeholders </li>
+
+          </ul>
+          <br>
+          <br>
+
+                         <h3 class="emblem">Tools & Tech</h3>
+        <hr class="line_modal">
+        <br>
+        <ul>
+        <li>            <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=flutter" class="h-8" alt="Flutter" /> Flutter</li>
+        <li><img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=kotlin" class="h-8" alt="Kotlin" /> Kotlin</li>
+<li><img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=laravel" class="h-8" alt="laravel" /> Laravel</li>
+
+          </ul>
+        `
+      },
+
+      project_zona_web: {
+        title: 'Website Zona Mahasiswa',
+        content: `
+      <h3 class="emblem">Description</h3>
+      <hr class="line_modal">
+      <br>
+      <p>
+      Successfully built and launched https://zonamahasiswa.id, a student-focused news portal with tens of thousands of monthly visitors. Developed responsive web design using HTML5, CSS3, JavaScript, jQuery, and Bootstrap. Coordinated with stakeholders to implement their requirements.
+      </p>
+
+      <br>
+      <br>
+
+      <h3 class="emblem">Team Overview</h3>
+      <hr class="line_modal">
+      <br>
+      <ul>
+      <li>• Total Technical Team: 3</li>
+        <li>• My Role: As Fullstack Web Developer</li>
+        </ul>
+
+        <br>
+        <br>
+
+          <h3 class="emblem">My Contribution</h3>
+      <hr class="line_modal">
+      <br>
+      <ul>
+      <li>• Slicing Figma designs into responsive web pages</li>
+        <li>• Developing several modules for both front-end and back-end, such as the read page, home page, and comment section</li>
+              <li>• Integrating Google AdSense</li>
+              <li>• Performing DOM manipulation on the front-end and creating REST APIs on the back-end</li>
+
+        </ul>
+        <br>
+        <br>
+
+                    <h3 class="emblem">Tools & Tech</h3>
+      <hr class="line_modal">
+      <br>
+      <ul>
+      <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=php" class="h-8" alt="PHP" /> PHP</li>
+      <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=jquery" class="h-8" alt="jQuery" /> jQuery</li>
+            <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=javascript" class="h-8" alt="javascript" /> Javascript</li>
+                  <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=bootstrap" class="h-8" alt="Bootstrap" /> Bootstrap</li>
+
+        </ul>
+      `
+      },
+
+      project_benerin: {
+        title: 'Android App Benerin',
+        content: `
+        <h3  class="emblem">Description</h3>
+        <hr class="line_modal">
+        <br>
+        <p>
+Successfully created and launched "Benerin", a home repair and construction service app. Collaborated with development teams to plan and build the app, focusing on mobile development and seamless integration with backend RESTful API
+          </p>
+
+        <br>
+        <br>
+
+        <h3 class="emblem">Team Overview</h3>
+        <hr class="line_modal">
+        <br>
+        <ul>
+        <li>• Total Technical Team: 5</li>
+          </ul>
+          <p>• My Role:</p>
+          <ul style="margin-left:8px;">
+            <li>- Native Android Developer </li>
+          </ul>
+          <br>
+          <br>
+
+               <h3 class="emblem">My Contribution</h3>
+        <hr class="line_modal">
+        <br>
+        <ul>
+        <li>• Create some module in Front End Android like countdown payment, send prove of payment, and push notification</li>
+        <li>• Implement Retrofit in Android Apps to provide better Rest API communication with server</li>  
+          </ul>
+          <br>
+          <br>
+
+                         <h3 class="emblem">Tools & Tech</h3>
+        <hr class="line_modal">
+        <br>
+        <ul>
+                  <li><img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=kotlin" class="h-8" alt="Kotlin" /> Kotlin</li>
+        <li>            <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=java" class="h-8" alt="java" /> Java</li>
+
+          </ul>
+        `
+      },
+
+      project_astro: {
+        title: 'Back End Server Astro',
+        content: `
+      <h3 class="emblem">Description</h3>
+      <hr class="line_modal">
+      <br>
+      <p>
+      Involved in the development of an ERP application for an Astro Distributor, which functions as a control system and management for sales visits to client stores. In this project, I played a role in backend development for the sales visit module, covering visit data management, sales activity logging, and integration with the overall distributor management system.
+      </p>
+
+      <br>
+      <br>
+
+      <h3 class="emblem">Team Overview</h3>
+      <hr class="line_modal">
+      <br>
+      <ul>
+      <li>• Total Technical Team: 4</li>
+        <li>• My Role: As Back End Developer</li>
+        </ul>
+
+        <br>
+        <br>
+
+          <h3 class="emblem">My Contribution</h3>
+      <hr class="line_modal">
+      <br>
+      <ul>
+      <li>• Make Rest API for Front End Web And Front End Mobile</li>
+        <li>• Create SQL DB</li>
+        </ul>
+        <br>
+        <br>
+
+                    <h3 class="emblem">Tools & Tech</h3>
+      <hr class="line_modal">
+      <br>
+      <ul>
+              <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=nestjs" class="h-8" alt="NestJS" /> Nest JS</li>
+
+            <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=nodejs" class="h-8" alt="Node JS" />Node JS</li>
+        </ul>
+      `
+      },
+
+      project_gita: {
+        title: 'PT Gita Pratama Nusantara Online Test Website',
+        content: `
+      <h3 class="emblem">Description</h3>
+      <hr class="line_modal">
+      <br>
+      <p>
+      This Online Training Website was created for the selection test of potential marketing partners for PT Gita Pratama Nusantara in selling the Gita Smart School application. It serves as a medium for introducing tasks, learning through videos, and comprehension tests. I played a full role in its development and design.
+      </p>
+
+      <br>
+      <br>
+
+      <h3 class="emblem">Team Overview</h3>
+      <hr class="line_modal">
+      <br>
+      <ul>
+      <li>• Total Technical Team: 1</li>
+        <li>• My Role: As Fullstack Web Developer</li>
+        </ul>
+
+        <br>
+        <br>
+
+          <h3 class="emblem">My Contribution</h3>
+      <hr class="line_modal">
+      <br>
+      <ul>
+      <li>• Fully developed the Test Website for potential partners, including both front-end and back-end</li>
+        <li>• Designed the database structure for the partner Test Website</li>
+        </ul>
+        <br>
+        <br>
+
+                    <h3 class="emblem">Tools & Tech</h3>
+      <hr class="line_modal">
+      <br>
+      <ul>
+      <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=php" class="h-8" alt="PHP" /> PHP</li>
+      <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=jquery" class="h-8" alt="jQuery" /> jQuery</li>
+      <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=javascript" class="h-8" alt="JavaScript" /> JavaScript</li>
+            <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=bootstrap" class="h-8" alt="Bootstrap" /> Bootstrap</li>
+        </ul>
+      `
+      },
+
+      project_adi: {
+        title: 'Adi Persada Beton (Sadang Factory) Data Management Information System',
+        content: `
+      <h3 class="emblem">Description</h3>
+      <hr class="line_modal">
+      <br>
+      <p>
+      The Data Management Information System for PT Adi Persada Beton (Sadang Factory) was created to facilitate business processes and data monitoring. This application includes project, customer, and vendor management, as well as operational data logging. I served as a backend developer and also contributed to the frontend
+      </p>
+
+      <br>
+      <br>
+
+      <h3 class="emblem">Team Overview</h3>
+      <hr class="line_modal">
+      <br>
+      <ul>
+      <li>• Total Technical Team: 2</li>
+        <li>• My Role: As Fullstack Web Developer</li>
+        </ul>
+
+        <br>
+        <br>
+
+          <h3 class="emblem">My Contribution</h3>
+      <hr class="line_modal">
+      <br>
+      <ul>
+      <li>• Created the required database structure</li>
+        <li>• Built the necessary back-end logic for all modules</li>
+        <li>• Developed parts of the front-end display for the website</li>
+        </ul>
+        <br>
+        <br>
+
+                    <h3 class="emblem">Tools & Tech</h3>
+      <hr class="line_modal">
+      <br>
+      <ul>
+      <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=laravel" class="h-8" alt="Laravel" /> Laravel</li>
+      <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=jquery" class="h-8" alt="jQuery" /> jQuery</li>
+      <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=javascript" class="h-8" alt="JavaScript" /> JavaScript</li>
+            <li> <img style="display:inline; margin-right:8px;" src="https://skillicons.dev/icons?i=bootstrap" class="h-8" alt="Bootstrap" /> Bootstrap</li>
+        </ul>
+      `
       },
     };
 
@@ -1156,14 +1768,15 @@
   <script>
     const hamburger = document.getElementById('hamburger');
     const popupMenu = document.getElementById('popup-menu');
-    const closeBtn = document.getElementById('close-btn');
+    const closeBtnHamburger = document.getElementById('close-btn');
 
     hamburger.addEventListener('click', () => {
+
       popupMenu.classList.add('right-0');
       popupMenu.classList.remove('right-[-100%]');
     });
 
-    closeBtn.addEventListener('click', () => {
+    closeBtnHamburger.addEventListener('click', () => {
       popupMenu.classList.add('right-[-100%]');
       popupMenu.classList.remove('right-0');
     });
